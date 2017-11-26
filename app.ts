@@ -22,7 +22,7 @@
 }
 
 window.onload = () => {
-    var el = document.getElementById('content');
-    var greeter = new Greeter(el);
+    var el_greeter = document.getElementById('greeter');
+    var greeter = new Greeter(el_greeter);
     greeter.start();
 };
