@@ -1,23 +1,12 @@
-var Greeter = (function () {
-    function Greeter(element) {
-        this.element = element;
-        this.element.innerHTML += "The time is: ";
-        this.span = document.createElement('span');
-        this.element.appendChild(this.span);
-        this.span.innerText = new Date().toUTCString();
-    }
-    Greeter.prototype.start = function () {
-        var _this = this;
-        this.timerToken = setInterval(function () { return _this.span.innerHTML = new Date().toUTCString(); }, 500);
-    };
-    Greeter.prototype.stop = function () {
-        clearTimeout(this.timerToken);
-    };
-    return Greeter;
-}());
-window.onload = function () {
-    var el_greeter = document.getElementById('greeter');
-    var greeter = new Greeter(el_greeter);
-    greeter.start();
-};
-//# sourceMappingURL=app.js.map
+$(document).ready(function() {
+	var block_home_page = $('#block-home-page');
+	block_home_page.hide();
+	$.getJSON('http://b1oki.noip.me/health.php', function (data) {
+		console.log('begin data');
+		console.log(data);
+		console.log('finish data');
+		if (data.health == 1) {
+			block_home_page.show();
+		}
+	});
+});
