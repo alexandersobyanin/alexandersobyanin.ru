@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-	if (location.href.indexOf("https://") == -1) {
-		location.href = location.href.replace("http://", "https://");
+	if (location.href.indexOf("https://") == 0) {
+		location.href = location.href.replace("https://", "http://");
 	}
 
 	var block_home_page = $('#block-home-page');
