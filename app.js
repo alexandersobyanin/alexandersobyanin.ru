@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+	if (location.href.indexOf("https://") == -1) {
+		location.href = location.href.replace("http://", "https://");
+	}
+
 	var block_home_page = $('#block-home-page');
 	$.getJSON('http://b1oki.noip.me/health.php', function (data) {
 		console.log('begin data');
@@ -8,4 +13,5 @@ $(document).ready(function() {
 			block_home_page.hide();
 		}
 	});
+
 });
