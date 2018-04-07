@@ -57,6 +57,15 @@ span {
     font-style: italic;
 }
 
+a.social-link:hover {
+    text-decoration: none;
+}
+
+a.social-link svg {
+    height: 64px;
+    width: 64px;
+}
+
 /* Customize scrollbars in webkit */
 
 ::-webkit-scrollbar {
