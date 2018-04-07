@@ -10,12 +10,20 @@ $(document).ready(function() {
 		url: 'http://b1oki.noip.me/health.php',
 		dataType: 'json',
 		success: function (data) {
+			console.log('get success');
 			console.log('begin data');
 			console.log(data);
 			console.log('finish data');
 			if (data.health != 1) {
 				block_home_page.hide();
 			}
+		},
+		error: function (data) {
+			console.log('get error');
+			console.log('begin data');
+			console.log(data);
+			console.log('finish data');
+			block_home_page.hide();
 		}
 	});
 });
