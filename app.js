@@ -1,8 +1,8 @@
 $(document).ready(function() {
-	if (location.host != "alexandersobyanin.ru") {
+	if (False && location.host != "alexandersobyanin.ru") {
 		location.replace("http://alexandersobyanin.ru");
 	}
-	if (location.href.indexOf("https://") == 0) {
+	if (False && location.href.indexOf("https://") == 0) {
 		location.href = location.href.replace("https://", "http://");
 	}
 
