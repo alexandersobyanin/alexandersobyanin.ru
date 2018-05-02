@@ -1,7 +1,7 @@
 #BEGIN
 [wildcard]
 *://check.torproject.org/*
-*://*.2ip.*/*
+*://*.onion/*
 *://*.pornhub.com/*
 *://*.phncdn.com/*
 *://*.redtube.com/*
