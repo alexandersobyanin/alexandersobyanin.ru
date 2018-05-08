@@ -14,7 +14,7 @@
 @*://*.thepiratebay.se/*
 @*://*.rutracker.org/*
 @*://*.rutor.info/*
-@*://*.linkedin.com/*
+#@*://*.linkedin.com/*
 
 [regexp]
 
