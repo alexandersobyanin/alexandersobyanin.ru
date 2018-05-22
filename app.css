@@ -31,12 +31,24 @@ footer {
     border-top: 1px solid #666;
 }
 
-p span.icon-group-title {
-    position: relative;
-    bottom: 1em;
-    right: 1em;
+div.social-link-column-left {
+    float: left;
+    margin-left: 30%;
+}
+
+div.social-link-column-right {
+    margin-left: 45%;
+}
+
+div.social-link-column-right p {
+    text-align: left;
+}
+
+div.social-link-column-left p span.icon-group-title {
     color: #F0E7D5;
     opacity: 0.15;
+    position: relative;
+    bottom: 0.1em;
 }
 
 a:link, a:visited {
