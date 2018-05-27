@@ -19,6 +19,7 @@
 #@*://*.telegram.org/*
 #@*://*.linkedin.com/*
 @*://*.duolingo.com/*
+@*://*.about.me/*
 
 [regexp]
 
