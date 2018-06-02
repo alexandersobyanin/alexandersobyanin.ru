@@ -15,7 +15,7 @@ $(document).ready(function() {
 	*/
 	var block_home_page = $('#block-home-page');
 	$.ajax({
-		url: '//b1oki.noip.me/health.php',
+		url: 'http://b1oki.noip.me/health.php',
 		dataType: 'json',
 		success: function (data) {
 			if (data.health != 1) {
