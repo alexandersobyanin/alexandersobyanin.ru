@@ -7,20 +7,20 @@
 [wildcard]
 @*://check.torproject.org/*
 @*://*.onion/*
+#@*://*.about.me/*
+@*://*.brazzers.com/*
+#@*://*.duolingo.com/*
+@*://*.graniru.org/*
+#@*://*.linkedin.com/*
 @*://*.pornhub.com/*
 @*://*.phncdn.com/*
 @*://*.redtube.com/*
-@*://*.brazzers.com/*
-@*://*.youporn.com/*
-@*://*.thepiratebay.se/*
-@*://*.rutracker.org/*
 @*://*.rutor.info/*
+@*://*.rutracker.org/*
 @*://*.tdesktop.com/*
 #@*://*.telegram.org/*
-#@*://*.linkedin.com/*
-#@*://*.duolingo.com/*
-#@*://*.about.me/*
-@*://*.graniru.org/*
+@*://*.thepiratebay.se/*
+@*://*.youporn.com/*
 
 [regexp]
 
