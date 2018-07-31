@@ -18,7 +18,7 @@ $(document).ready(function() {
 		url: '//b1oki.noip.me/health.php',
 		dataType: 'json',
 		success: function (data) {
-			if (data.health != 1) {
+			if (data.health !== 1) {
 				block_home_page.hide();
 			}
 		},
