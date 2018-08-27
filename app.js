@@ -1,4 +1,10 @@
-$(document).ready(function() {
+Raven.context(function () {
+    $(document).ready(function() {
+		main();
+	});
+});
+
+function main() {
 	/*
 	// change host to only one
 	if (location.host != "alexandersobyanin.ru") {
@@ -13,7 +19,7 @@ $(document).ready(function() {
 		location.href = location.href.replace("http://", "https://");
 	}
 	*/
-	var block_home_page = $('#block-home-page');
+	let block_home_page = $('#block-home-page');
 	$.ajax({
 		url: '//b1oki.noip.me/health.php',
 		dataType: 'json',
@@ -26,4 +32,4 @@ $(document).ready(function() {
 			block_home_page.hide();
 		}
 	});
-});
+}
