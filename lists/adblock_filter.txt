@@ -1,0 +1,5 @@
+[Adblock Plus 2.0]
+! Title: Adblock Filter by b1oki
+! Homepage: https://alexandersobyanin.ru
+! Expires: 1 days
+@@||alexandersobyanin.ru
