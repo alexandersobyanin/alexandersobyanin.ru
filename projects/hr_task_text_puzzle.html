@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Puzzle</title>
+</head>
+<body>
+<h1>Text Puzzle</h1>
+
+<h3> Отгадай загадки!</h3>
+<p> Сто одёжек и все без застёжек.</p>
+<input type="text" id="puzzle1"/>
+<br>
+
+<p> Зимой и летом одним цветом.</p>
+<input type="text" id="puzzle2"/>
+<br>
+
+<p> Вчера было, сегодня есть и завтра будет.</p>
+<input type="text" id="puzzle3"/>
+<br>
+<br>
+<br>
+
+<input type="button" value="Ответить" onclick="runGame();"/>
+
+<script src="../library/http_cdn.ravenjs.com_3.26.4_raven.js" crossorigin="anonymous"></script>
+<script>Raven.config('https://ff74083e89b442f792d44661e2f498c7@sentry.io/1269741').install();</script>
+<script type="text/javascript" language="JavaScript" src="../library/http_code.jquery.com_jquery-1.8.0.js"></script>
+<script type="text/javascript">
+    function checkAnswer(id, trueAnswer) {
+        let userAnswer = document.getElementById(id).value;
+        return userAnswer.toLowerCase() === trueAnswer.toLowerCase();
+    }
+
+    function runGame() {
+        let goodAnswer = 0;
+
+        if (checkAnswer('puzzle1', 'Капуста')) {
+            goodAnswer++;
+        }
+
+        if (checkAnswer('puzzle2', 'Елка')) {
+            goodAnswer++;
+        }
+
+        if (checkAnswer('puzzle3', 'Время')) {
+            goodAnswer++;
+        }
+
+        if (goodAnswer === 0) {
+            alert('Вы ничего не угадали');
+        } else {
+            alert('Количество правильных ответов: ' + goodAnswer);
+        }
+    }
+</script>
+</body>
+</html>
