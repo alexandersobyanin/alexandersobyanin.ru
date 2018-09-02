@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fools Village Clicker</title>
+</head>
+<body>
+<h1>Monospaced Converter</h1>
+
+<div>
+    <label>
+        Input your string:
+        <input type="text" name="source" id="source">
+    </label>
+</div>
+<div id="result">
+    <p>Monospaced string:</p>
+    <tt style="border: 1px black solid; font-size: xx-large;"></tt>
+</div>
+
+<script src="../library/http_cdn.ravenjs.com_3.26.4_raven.js" crossorigin="anonymous"></script>
+<script>Raven.config('https://ff74083e89b442f792d44661e2f498c7@sentry.io/1269741').install();</script>
+<script type="text/javascript" language="JavaScript" src="../library/http_code.jquery.com_jquery-1.8.0.js"></script>
+<script type="text/javascript">
+    'use strict';
+
+    function between(x, min, max) {
+        console.debug('between, x='+x+', min='+min+', max='+max);
+        return x >= min && x <= max;
+    }
+
+    function convertToMonospaced(char_code) {
+        console.debug('convertToMonospaced, char_code='+char_code);
+        if (between(char_code, 48, 57)) {
+            // 0 -> 48 -> 1D7F6 / 120822
+            // 9 -> 57 -> 1D7FF / 120831
+            return 120822 - 48 + char_code;
+        } else if (between(char_code, 65, 90)) {
+            // A -> 65 -> 1D670 / 120432
+            // Z -> 90 -> 1D689 / 120457
+            return 120432 - 65 + char_code;
+        } else if (between(char_code, 97, 122)) {
+            // a -> 97 -> 1D68A / 120458
+            // z -> 122 -> 1D6A3 / 120483
+            return 120458 - 97 + char_code;
+        }
+        return char_code;
+    }
+
+    function changeResult(event) {
+        console.debug('changeResult, event='+event);
+        let splitString = $(event.target).val().split('');
+        let resultString = [];
+        $.each(splitString, function (index, value) {
+            let char_code_old = value.charCodeAt(0);
+            let char_code_new = convertToMonospaced(char_code_old);
+            console.debug('changeResult, char_code_old='+char_code_old+', char_code_new='+char_code_new);
+            resultString.push('&#' + char_code_new + ';');
+        });
+        $('div#result tt').html(resultString.join(''));
+    }
+
+    $('input#source').on("change keyup", changeResult);
+</script>
+</body>
+</html>
