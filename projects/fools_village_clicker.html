@@ -4,35 +4,40 @@
     <meta charset="UTF-8">
     <title>Fools Village Clicker</title>
     <style>
-* {
-    color: white;
-    background-color: black;
-}
-div.hero {
-    border: 1px solid yellow;
-    padding-left: 15px;
-    padding-right: 10px;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-}
-.hero span {
-    color: yellow;
-}
-#enemy {
-    border: 1px solid red;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select:none;
-    user-select:none;
-    -o-user-select:none;
-}
-#message {
-    font-style: italic;
-}
-#help_message {
-    font-style: italic;
-}
+        * {
+            color: white;
+            background-color: black;
+        }
+
+        div.hero {
+            border: 1px solid yellow;
+            padding-left: 15px;
+            padding-right: 10px;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        .hero span {
+            color: yellow;
+        }
+
+        #enemy {
+            border: 1px solid red;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -o-user-select: none;
+        }
+
+        #message {
+            font-style: italic;
+        }
+
+        #help_message {
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -57,360 +62,360 @@ div.hero {
 <script>Raven.config('https://ff74083e89b442f792d44661e2f498c7@sentry.io/1269741').install();</script>
 <script type="text/javascript" language="JavaScript" src="../library/http_code.jquery.com_jquery-1.8.0.js"></script>
 <script type="text/javascript">
-let enemiesDB = [
-    {
-        "enemy_name": "Боб",
-        "tag": 'bob',
-        "health_base": 7
-    }, {
-        "enemy_name": "Кларк Крушитель",
-        "klark": 'bob',
-        "health_base": 12
-    }, {
-        "enemy_name": "Агнец Божий",
-        "tag": 'agnec',
-        "health_base": 15
-    }, {
-        "enemy_name": "Супермен",
-        "tag": 'superman',
-        "health_base": 9
-    }, {
-        "enemy_name": "Мифесто",
-        "tag": 'mifesto',
-        "health_base": 11
-    }, {
-        "enemy_name": "Твоя мамаша",
-        "tag": 'mom',
-        "health_base": 25
-    }, {
-        "enemy_name": "Клеопатра",
-        "tag": 'cleopatra',
-        "health_base": 10
-    }, {
-        "enemy_name": "Швабра",
-        "tag": 'shwabra',
-        "health_base": 3
-    }, {
-        "enemy_name": "Помидор-убийца",
-        "tag": 'tomato',
-        "health_base": 4
-    }, {
-        "enemy_name": "Косинус",
-        "tag": 'cos',
-        "health_base": 3
-    }, {
-        "enemy_name": "Рекс",
-        "tag": 'rax',
-        "health_base": 5
-    }, {
-        "enemy_name": "Король Черепах",
-        "tag": 'turtleking',
-        "health_base": 10
-    }, {
-        "enemy_name": "Черепаха-боец",
-        "tag": 'turtlewar',
-        "health_base": 5
-    }, {
-        "enemy_name": "Евлампия Романова",
-        "tag": 'evlamp',
-        "health_base": 16
-    }, {
-        "enemy_name": "Чешский Бомж",
-        "tag": 'homo',
-        "health_base": 6
-    }, {
-        "enemy_name": "Черный Властелин",
-        "tag": 'nigga',
-        "health_base": 30
-    }, {
-        "enemy_name": "Курва",
-        "tag": 'kurwa',
-        "health_base": 7
-    }, {
-        "enemy_name": "Босс",
-        "tag": 'boss',
-        "health_base": 25
+    let enemiesDB = [
+        {
+            "enemy_name": "Боб",
+            "tag": 'bob',
+            "health_base": 7
+        }, {
+            "enemy_name": "Кларк Крушитель",
+            "klark": 'bob',
+            "health_base": 12
+        }, {
+            "enemy_name": "Агнец Божий",
+            "tag": 'agnec',
+            "health_base": 15
+        }, {
+            "enemy_name": "Супермен",
+            "tag": 'superman',
+            "health_base": 9
+        }, {
+            "enemy_name": "Мифесто",
+            "tag": 'mifesto',
+            "health_base": 11
+        }, {
+            "enemy_name": "Твоя мамаша",
+            "tag": 'mom',
+            "health_base": 25
+        }, {
+            "enemy_name": "Клеопатра",
+            "tag": 'cleopatra',
+            "health_base": 10
+        }, {
+            "enemy_name": "Швабра",
+            "tag": 'shwabra',
+            "health_base": 3
+        }, {
+            "enemy_name": "Помидор-убийца",
+            "tag": 'tomato',
+            "health_base": 4
+        }, {
+            "enemy_name": "Косинус",
+            "tag": 'cos',
+            "health_base": 3
+        }, {
+            "enemy_name": "Рекс",
+            "tag": 'rax',
+            "health_base": 5
+        }, {
+            "enemy_name": "Король Черепах",
+            "tag": 'turtleking',
+            "health_base": 10
+        }, {
+            "enemy_name": "Черепаха-боец",
+            "tag": 'turtlewar',
+            "health_base": 5
+        }, {
+            "enemy_name": "Евлампия Романова",
+            "tag": 'evlamp',
+            "health_base": 16
+        }, {
+            "enemy_name": "Чешский Бомж",
+            "tag": 'homo',
+            "health_base": 6
+        }, {
+            "enemy_name": "Черный Властелин",
+            "tag": 'nigga',
+            "health_base": 30
+        }, {
+            "enemy_name": "Курва",
+            "tag": 'kurwa',
+            "health_base": 7
+        }, {
+            "enemy_name": "Босс",
+            "tag": 'boss',
+            "health_base": 25
+        }
+    ];
+
+    let enemiesDB_hardcore = [
+        {
+            "enemy_name": "Страшный монстр",
+            "tag": 'monster',
+            "health_base": 1
+        }
+    ];
+
+    let damage = 0;
+    let newgame = 0;
+    let enemyCur = null;
+    let enemies = null;
+    let game_begin = false;
+    let hardcore = false;
+
+    function stopAllTimeouts() {
+        let id = window.setTimeout(null, 0);
+        console.debug('stopAllTimeouts, timeout.id=' + id);
+        while (id--) {
+            window.clearTimeout(id);
+        }
     }
-];
 
-let enemiesDB_hardcore = [
-    {
-        "enemy_name": "Страшный монстр",
-        "tag": 'monster',
-        "health_base": 1
+    function changeGameState(state) {
+        console.debug('changeGameState, state=' + state);
+        game_begin = state;
     }
-];
 
-let damage = 0;
-let newgame = 0;
-let enemyCur = null;
-let enemies = null;
-let game_begin = false;
-let hardcore = false;
-
-function stopAllTimeouts(){
-    let id = window.setTimeout(null, 0);
-    console.debug('stopAllTimeouts, timeout.id='+id);
-    while (id--){
-        window.clearTimeout(id);
+    function brief() {
+        console.debug('brief');
+        if (!game_begin) {
+            logGameBeginFalse();
+            return;
+        }
+        if (!hardcore) {
+            return;
+        }
+        alert('Добро пожаловать в Fools Village Clicker Hardcore!');
+        alert('Для того чтобы победить, необходимо приложить массу усилий.');
+        alert('Но Вы в силах преодолеть все преграды на пути к награде!');
+        alert('Для проведения атаки по врагу, необходимо кликнуть по нему левой кнопкой мыши.');
+        alert('Постарайтесь успеть прикончить неприятеля, пока он не сделал тоже самое с Вами!');
+        alert('Удачи в бою!');
     }
-}
 
-function changeGameState(state) {
-    console.debug('changeGameState, state='+state);
-    game_begin = state;
-}
-
-function brief(){
-    console.debug('brief');
-    if (!game_begin) {
-        logGameBeginFalse();
-        return;
+    function hardcore_fail() {
+        console.debug('hardcore_fail');
+        enemyPwned(enemies[enemyCur - 1]['enemy_name']);
+        alert('Поздравляю! Вы победили самого главного босса! Можете получить свою награду!');
+        alert('В награду вы получаете:');
+        alert('Благодарность от разработчика игры!');
+        alert('Благодарю!');
+        message('Удачи Вам!');
     }
-    if (!hardcore) {
-        return;
+
+    function slapEnemy() {
+        console.debug('slapEnemy, damage=' + damage);
+        if (!game_begin) {
+            logGameBeginFalse();
+            return;
+        }
+        let enemy_el = $('#enemy');
+        let health = enemy_el.data('health');
+        let enemy_name = enemy_el.text();
+        console.debug('slapEnemy, enemy_name=' + enemy_name + ', health=' + health);
+        health = health - damage;
+
+        if (health > 0) {
+            enemyChangeColor('red');
+            setTimeout(enemyChangeColor, 100, 'inherit');
+            showEnemyHealth(enemy_name, health);
+            enemy_el.data('health', health);
+        } else {
+            enemyPwned(enemy_name);
+            getNextEnemy();
+        }
     }
-    alert('Добро пожаловать в Fools Village Clicker Hardcore!');
-    alert('Для того чтобы победить, необходимо приложить массу усилий.');
-    alert('Но Вы в силах преодолеть все преграды на пути к награде!');
-    alert('Для проведения атаки по врагу, необходимо кликнуть по нему левой кнопкой мыши.');
-    alert('Постарайтесь успеть прикончить неприятеля, пока он не сделал тоже самое с Вами!');
-    alert('Удачи в бою!');
-}
 
-function hardcore_fail(){
-    console.debug('hardcore_fail');
-    enemyPwned(enemies[enemyCur - 1]['enemy_name']);
-    alert('Поздравляю! Вы победили самого главного босса! Можете получить свою награду!');
-    alert('В награду вы получаете:');
-    alert('Благодарность от разработчика игры!');
-    alert('Благодарю!');
-    message('Удачи Вам!');
-}
-
-function slapEnemy(){
-    console.debug('slapEnemy, damage='+damage);
-    if (!game_begin) {
-        logGameBeginFalse();
-        return;
+    function enemyChangeColor(color) {
+        console.debug('enemyChangeColor, color=' + color);
+        if (!game_begin) {
+            logGameBeginFalse();
+            return;
+        }
+        $('#enemy').css("background-color", color);
     }
-    let enemy_el = $('#enemy');
-    let health = enemy_el.data('health');
-    let enemy_name = enemy_el.text();
-    console.debug('slapEnemy, enemy_name='+enemy_name+', health='+health);
-    health = health - damage;
 
-    if (health > 0) {
-        enemyChangeColor('red');
-        setTimeout(enemyChangeColor, 100, 'inherit');
-        showEnemyHealth(enemy_name, health);
+    function enemyPwned(enemy_name) {
+        console.debug('enemyPwned, enemy_name=' + enemy_name);
+        if (!game_begin) {
+            logGameBeginFalse();
+            return;
+        }
+        let enemy_el = $('#enemy');
+        enemy_el.html('<s>' + enemy_el.text() + '</s>');
+        message('Вы размазали ' + enemy_name + ' по стенке!');
+        upgradeHero();
+    }
+
+    function getNextEnemy() {
+        console.debug('getNextEnemy, enemyCur=' + enemyCur);
+        if (!game_begin) {
+            logGameBeginFalse();
+            return;
+        }
+        enemyCur = enemyCur + 1;
+        console.debug('enemyCur=' + enemyCur + ', enemies.length=' + enemies.length);
+        if (enemyCur === enemies.length) {
+            changeGameState(false);
+            if (hardcore) {
+                setTimeout(hardcore_fail, 10); // HARDCORE ONE BOSS 1 HP
+            } else {
+                message('Готовьтесь к новым приключениям!');
+                setTimeout(startNewGame, 700);
+            }
+        } else if (enemyCur > enemies.length) {
+            changeGameState(false);
+            reloadVillageGame()
+        } else {
+            drawEnemy();
+        }
+    }
+
+    function upgradeHero() {
+        console.debug('upgradeHero, damage=' + damage);
+        if (!game_begin) {
+            logGameBeginFalse();
+            return;
+        }
+        damage = damage + 1;
+        $('#damage').text(damage);
+    }
+
+    function _drawEnemy(enemy_name, tag, health) {
+        console.debug('_drawEnemy, enemy_name=' + enemy_name + ', tag=' + tag + ', health=' + health);
+        if (!game_begin) {
+            logGameBeginFalse();
+            return;
+        }
+        let enemy_el = $('#enemy');
+        enemy_el.text(enemy_name);
+        enemy_el.data('tag', tag);
         enemy_el.data('health', health);
-    } else {
-        enemyPwned(enemy_name);
-        getNextEnemy();
-    }
-}
-
-function enemyChangeColor(color) {
-    console.debug('enemyChangeColor, color='+color);
-    if (!game_begin) {
-        logGameBeginFalse();
-        return;
-    }
-    $('#enemy').css("background-color", color);
-}
-
-function enemyPwned(enemy_name){
-    console.debug('enemyPwned, enemy_name='+enemy_name);
-    if (!game_begin) {
-        logGameBeginFalse();
-        return;
-    }
-    let enemy_el = $('#enemy');
-    enemy_el.html('<s>' + enemy_el.text() + '</s>');
-    message('Вы размазали ' + enemy_name + ' по стенке!');
-    upgradeHero();
-}
-
-function getNextEnemy(){
-    console.debug('getNextEnemy, enemyCur='+enemyCur);
-    if (!game_begin) {
-        logGameBeginFalse();
-        return;
-    }
-    enemyCur = enemyCur + 1;
-    console.debug('enemyCur='+enemyCur+', enemies.length='+enemies.length);
-    if(enemyCur === enemies.length) {
-        changeGameState(false);
-        if (hardcore) {
-            setTimeout(hardcore_fail, 10); // HARDCORE ONE BOSS 1 HP
-        } else {
-            message('Готовьтесь к новым приключениям!');
-            setTimeout(startNewGame, 700);
+        if (!hardcore) {
+            setTimeout(showEnemyHealth, 400, enemy_name, health);
         }
-    } else if(enemyCur > enemies.length){
-        changeGameState(false);
-        reloadVillageGame()
-    } else {
-        drawEnemy();
     }
-}
 
-function upgradeHero(){
-    console.debug('upgradeHero, damage='+damage);
-    if (!game_begin) {
-        logGameBeginFalse();
-        return;
-    }
-    damage = damage + 1;
-    $('#damage').text(damage);
-}
-
-function _drawEnemy(enemy_name, tag, health){
-    console.debug('_drawEnemy, enemy_name='+enemy_name+', tag='+tag+', health='+health);
-    if (!game_begin) {
-        logGameBeginFalse();
-        return;
-    }
-    let enemy_el = $('#enemy');
-    enemy_el.text(enemy_name);
-    enemy_el.data('tag', tag);
-    enemy_el.data('health', health);
-    if (!hardcore) {
-        setTimeout(showEnemyHealth, 400, enemy_name, health);
-    }
-}
-
-function drawEnemy(){
-    console.debug('drawEnemy, enemyCur='+enemyCur);
-    if (!game_begin) {
-        logGameBeginFalse();
-        return;
-    }
-    _drawEnemy(enemies[enemyCur]['enemy_name'], enemies[enemyCur]['tag'], enemies[enemyCur]['health']);
-}
-
-function showEnemyHealth(enemy_name, health) {
-    console.debug('showEnemyHealth, enemy_name='+enemy_name+', health='+health);
-    if (!game_begin) {
-        logGameBeginFalse();
-        return;
-    }
-    message('У ' + enemy_name + ' осталось ' + health + ' HP!');
-}
-
-function getNewGameTitle(){
-    console.debug('getNewGameTitle, newgame='+newgame);
-    let ngt = 'NG';
-    if (hardcore) {
-        ngt = 'Hardcore ' + ngt;
-    }
-    for (let i = 1; i < newgame; i++){
-        ngt = ngt + '+';
-    }
-    return ngt;
-}
-
-function startNewGame(){
-    console.debug('startNewGame, newgame='+newgame);
-    newgame = newgame + 1;
-    enemyCur = -1;
-    let enemies_count = 0;
-    if (hardcore) {
-        enemies_count = 1;
-    } else {
-        enemies_count = 5;
-    }
-    console.debug('enemies_count='+enemies_count);
-    // draw new game title
-    let ng_title = getNewGameTitle();
-    message('Начинается ' + ng_title);
-    $('#ngt').text(ng_title);
-    // make enemies
-    enemies = [];
-    let random_enemy = null;
-    for(let i = 0; i < enemies_count; i++){
-        if (hardcore) {
-            random_enemy = enemiesDB_hardcore[0];
-            console.debug('random_num=0, hardcore=1');
-        } else {
-            let random_num = Math.floor(Math.random() * enemiesDB.length);
-            random_enemy = enemiesDB[random_num];
-            console.debug('random_num='+random_num);
+    function drawEnemy() {
+        console.debug('drawEnemy, enemyCur=' + enemyCur);
+        if (!game_begin) {
+            logGameBeginFalse();
+            return;
         }
-        enemies[i] = {
+        _drawEnemy(enemies[enemyCur]['enemy_name'], enemies[enemyCur]['tag'], enemies[enemyCur]['health']);
+    }
+
+    function showEnemyHealth(enemy_name, health) {
+        console.debug('showEnemyHealth, enemy_name=' + enemy_name + ', health=' + health);
+        if (!game_begin) {
+            logGameBeginFalse();
+            return;
+        }
+        message('У ' + enemy_name + ' осталось ' + health + ' HP!');
+    }
+
+    function getNewGameTitle() {
+        console.debug('getNewGameTitle, newgame=' + newgame);
+        let ngt = 'NG';
+        if (hardcore) {
+            ngt = 'Hardcore ' + ngt;
+        }
+        for (let i = 1; i < newgame; i++) {
+            ngt = ngt + '+';
+        }
+        return ngt;
+    }
+
+    function startNewGame() {
+        console.debug('startNewGame, newgame=' + newgame);
+        newgame = newgame + 1;
+        enemyCur = -1;
+        let enemies_count = 0;
+        if (hardcore) {
+            enemies_count = 1;
+        } else {
+            enemies_count = 5;
+        }
+        console.debug('enemies_count=' + enemies_count);
+        // draw new game title
+        let ng_title = getNewGameTitle();
+        message('Начинается ' + ng_title);
+        $('#ngt').text(ng_title);
+        // make enemies
+        enemies = [];
+        let random_enemy = null;
+        for (let i = 0; i < enemies_count; i++) {
+            if (hardcore) {
+                random_enemy = enemiesDB_hardcore[0];
+                console.debug('random_num=0, hardcore=1');
+            } else {
+                let random_num = Math.floor(Math.random() * enemiesDB.length);
+                random_enemy = enemiesDB[random_num];
+                console.debug('random_num=' + random_num);
+            }
+            enemies[i] = {
                 'tag': random_enemy['tag'],
                 'health': random_enemy['health_base'] * newgame,
                 'enemy_name': random_enemy['enemy_name']
-        };
-        console.debug('random_enemy.enemy_name='+random_enemy['enemy_name']);
-    }
-    changeGameState(true);
-    upgradeHero();
-}
-
-function message(text){
-    console.debug('message, text='+text);
-    $('#message').text(text);
-}
-
-function logGameBeginFalse() {
-    console.debug('game_begin=false, return');
-}
-
-function startVillageGame(event){
-    console.debug('startVillageGame, hardcore_mode='+event.data.hardcore_mode);
-    stopAllTimeouts();
-    $('#start_normal').hide();
-    $('#start_hardcore').hide();
-    hardcore = event.data.hardcore_mode;
-    startNewGame();
-    setTimeout(brief, 10);
-    getNextEnemy();
-}
-
-function reloadVariables() {
-    console.debug('reloadVariables');
-    changeGameState(false);
-    damage = 0;
-    newgame = 0;
-    enemyCur = null;
-    enemies = null;
-    hardcore = false;
-}
-
-function reloadVillageGame(){
-    console.debug('reloadVillageGame, game_begin='+game_begin);
-    stopAllTimeouts();
-    reloadVariables();
-    $('#ngt').text('NG');
-    $('#damage').text(damage);
-    $('#enemy').text('');
-    message('Выбирайте режим и начинаем!');
-    $('#start_normal').show();
-    $('#start_hardcore').show();
-}
-
-function gameClickHandler() {
-    console.debug('gameClickHandler, game_begin='+game_begin);
-    if (!game_begin) {
-        if (hardcore) {
-            console.debug('game_begin=0, hardcore=1');
-            reloadVillageGame();
+            };
+            console.debug('random_enemy.enemy_name=' + random_enemy['enemy_name']);
         }
-    } else {
-        slapEnemy();
+        changeGameState(true);
+        upgradeHero();
     }
-}
 
-$('#enemy').click(gameClickHandler);
-$('#start_normal').click({hardcore_mode: false}, startVillageGame);
-$('#start_hardcore').click({hardcore_mode: true}, startVillageGame);
+    function message(text) {
+        console.debug('message, text=' + text);
+        $('#message').text(text);
+    }
 
-$(document).ready(function () {
-    console.debug('document ready');
-    reloadVillageGame();
-})
+    function logGameBeginFalse() {
+        console.debug('game_begin=false, return');
+    }
+
+    function startVillageGame(event) {
+        console.debug('startVillageGame, hardcore_mode=' + event.data.hardcore_mode);
+        stopAllTimeouts();
+        $('#start_normal').hide();
+        $('#start_hardcore').hide();
+        hardcore = event.data.hardcore_mode;
+        startNewGame();
+        setTimeout(brief, 10);
+        getNextEnemy();
+    }
+
+    function reloadVariables() {
+        console.debug('reloadVariables');
+        changeGameState(false);
+        damage = 0;
+        newgame = 0;
+        enemyCur = null;
+        enemies = null;
+        hardcore = false;
+    }
+
+    function reloadVillageGame() {
+        console.debug('reloadVillageGame, game_begin=' + game_begin);
+        stopAllTimeouts();
+        reloadVariables();
+        $('#ngt').text('NG');
+        $('#damage').text(damage);
+        $('#enemy').text('');
+        message('Выбирайте режим и начинаем!');
+        $('#start_normal').show();
+        $('#start_hardcore').show();
+    }
+
+    function gameClickHandler() {
+        console.debug('gameClickHandler, game_begin=' + game_begin);
+        if (!game_begin) {
+            if (hardcore) {
+                console.debug('game_begin=0, hardcore=1');
+                reloadVillageGame();
+            }
+        } else {
+            slapEnemy();
+        }
+    }
+
+    $('#enemy').click(gameClickHandler);
+    $('#start_normal').click({hardcore_mode: false}, startVillageGame);
+    $('#start_hardcore').click({hardcore_mode: true}, startVillageGame);
+
+    $(document).ready(function () {
+        console.debug('document ready');
+        reloadVillageGame();
+    })
 </script>
 </body>
 </html>
