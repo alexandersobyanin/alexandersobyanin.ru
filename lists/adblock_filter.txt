@@ -3,5 +3,5 @@
 ! Homepage: https://alexandersobyanin.ru
 ! Expires: 1 days
 @@||alexandersobyanin.ru^$document
-@@||https://music.yandex.ru^$document
-@@||https://cloudapps.herokuapp.com/djvuviewer/?$document
+@@|https://music.yandex.ru/$document
+@@|https://cloudapps.herokuapp.com/djvuviewer/?$document
