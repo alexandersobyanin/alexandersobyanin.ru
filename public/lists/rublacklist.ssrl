@@ -1,0 +1,30 @@
+; Summary: Proxy Switchy! Rule List
+; Date: 02.05.2018
+; Website: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
+
+#BEGIN
+
+[wildcard]
+@*://check.torproject.org/*
+@*://*.onion/*
+#@*://*.about.me/*
+@*://*.brazzers.com/*
+#@*://*.duolingo.com/*
+@*://*.dou.ua/*
+@*://*.graniru.org/*
+@*://*.linkedin.com/*
+@*://*.pornhub.com/*
+@*://*.phncdn.com/*
+@*://*.redtube.com/*
+@*://*.rutor.info/*
+@*://*.rutracker.org/*
+@*://*.slideshare.net/*
+@*://*.tdesktop.com/*
+@*://*.telegram.org/*
+@*://*.t.me/*
+@*://*.thepiratebay.se/*
+@*://*.youporn.com/*
+
+[regexp]
+
+#END
