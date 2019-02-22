@@ -7,25 +7,27 @@
 [wildcard]
 @*://check.torproject.org/*
 @*://*.onion/*
-#@*://*.about.me/*
+;@*://*.about.me/*
 @*://*.abook-club.ru/*
-@*://*.brazzers.com/*
-#@*://*.duolingo.com/*
+;@*://*.duolingo.com/*
 @*://*.dou.ua/*
 @*://*.graniru.org/*
 @*://*.linkedin.com/*
+@*://*.slideshare.net/*
+@*://*.t.me/*
+@*://*.tdesktop.com/*
+@*://*.telegram.org/*
+; Tracker
+@*://*.rutor.info/*
+@*://*.rutracker.org/*
+@*://*.thepiratebay.se/*
+; Adult
+@*://*.2019.vote/*
+@*://*.brazzers.com/*
 @*://*.pornhub.com/*
 @*://*.phncdn.com/*
 @*://*.redtube.com/*
-@*://*.rutor.info/*
-@*://*.rutracker.org/*
-@*://*.slideshare.net/*
-@*://*.tdesktop.com/*
-@*://*.telegram.org/*
-@*://*.t.me/*
-@*://*.thepiratebay.se/*
 @*://*.youporn.com/*
-@*:://*.2019.vote/*
 
 [regexp]
 
