@@ -3,12 +3,11 @@ import Article from './Article'
 import articles from '../fixtures'
 
 function App() {
-    return null;
-    /*return (
+    return (
         <div>
-            <Article article={articles[0]} />
+            {/*<Article article={articles[0]} />*/}
         </div>
-    )*/
+    )
 }
 
 export default App
