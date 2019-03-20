@@ -1,14 +1,16 @@
 {
   "name": "alexandersobyanin",
-  "version": "0.1.0",
+  "version": "1.0.2-alpha",
   "private": true,
   "homepage": "https://b1oki.github.io",
   "dependencies": {
-    "node-sass": "^4.11.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5"
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "react-scripts": "latest",
+    "react-yandex-metrika": "latest",
+    "react-ga": "latest",
+    "@sentry/browser": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
