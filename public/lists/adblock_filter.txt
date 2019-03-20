@@ -2,7 +2,8 @@
 ! Title: Adblock Filter by b1oki
 ! Homepage: https://alexandersobyanin.ru
 ! Expires: 1 days
-! Version: 0.0.1
+! Version: 0.0.2
 @@||alexandersobyanin.ru^$document
-!без подписки режем рекламу!@@|https://music.yandex.ru/$document
+! Если нет подписки, то не исключаем рекламу Yandex из фильтра
+@@|https://music.yandex.ru/$document
 @@|https://cloudapps.herokuapp.com/djvuviewer/?$document
