@@ -42,19 +42,6 @@
   },
   "sites": [
     {
-      "compiledCss": ".nav-arrows {right: 550px!important;}.bb.favorites, .bb.boardstats {right: 1ch!important;}.bb.boardstats {top: 1ch!important; bottom: auto!important;}#postform table {margin-left: 1ch!important;}.top-user-boards, .post.oppost, .post.reply {max-width: 120ch!important; line-height: 1.3!important; font-size: 16px!important; margin-left: 1ch!important;}.spoiler {color: rgb(51, 51, 51)!important;}",
-      "css": ".nav-arrows {\n\tright: 550px;\n}\n\n.bb.favorites,\n.bb.boardstats {\n\tright: 1ch;\n}\n\n.bb.boardstats {\n\ttop: 1ch;\n\tbottom: auto;\n}\n\n#postform table {\n\tmargin-left: 1ch;\n}\n\n.top-user-boards,\n.post.oppost,\n.post.reply {\n\tmax-width: 120ch;\n\tline-height: 1.3;\n\tfont-size: 16px;\n\thyphens: auto;\n\tmargin-left: 1ch;\n}\n\n.spoiler {\n\tcolor: #333;\n}\n",
-      "id": "2ch.hk",
-      "js": "",
-      "libs": [],
-      "options": {
-        "altCSS": true,
-        "altJS": false,
-        "autoImportant": true,
-        "on": true
-      }
-    },
-    {
       "compiledCss": "",
       "css": "",
       "id": "crm.carbonsoft.ru",
