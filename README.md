@@ -1,3 +1,13 @@
+# GitHub Pages
+
+https://b1oki.github.io
+
+https://alexandersobyanin.ru
+
+https://b1oki.noip.me
+
+# React default manual
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
