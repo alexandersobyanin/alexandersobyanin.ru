@@ -1,16 +1,16 @@
 {
   "name": "alexandersobyanin",
-  "version": "1.0.2-alpha",
+  "version": "1.0.2-rc",
   "private": true,
-  "homepage": "https://b1oki.github.io",
+  "homepage": "https://alexandersobyanin.ru",
   "dependencies": {
+    "@sentry/browser": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-ga": "latest",
     "react-router-dom": "latest",
     "react-scripts": "latest",
-    "react-yandex-metrika": "latest",
-    "react-ga": "latest",
-    "@sentry/browser": "latest"
+    "react-yandex-metrika": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
