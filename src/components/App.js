@@ -24,7 +24,7 @@ class App extends Component {
                         <div id="block-home-page">
                             <h3>Home Page</h3>
                             <p>
-                                <a href="//b1oki.noip.me" target="_blank" rel="noopener noreferrer">
+                                <a href="//b1oki.herokuapp.com" target="_blank" rel="noopener noreferrer">
                                     Link to my Home Page with projects
                                 </a>
                             </p>

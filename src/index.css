@@ -1,11 +1,23 @@
 body {
-    font-family: "Roboto", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #F0E7D5;
     background: #555 url('assets/images/asphalt.png');
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.head-font {
+    font-family: 'Playfair Display', serif;
+}
+
+.regular-font {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.code-font {
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 code {

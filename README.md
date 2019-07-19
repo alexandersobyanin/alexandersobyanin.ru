@@ -6,6 +6,8 @@ https://alexandersobyanin.ru
 
 https://b1oki.noip.me
 
+https://b1oki.herokuapp.com/
+
 # React default manual
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
