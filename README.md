@@ -1,14 +1,8 @@
-# GitHub Pages
+# alexandersobyanin.ru
+b1oki's personal website
 
-https://alexandersobyanin.ru
-
-https://b1oki.github.io
-
-https://b1oki.noip.me
-
-https://b1oki.herokuapp.com/
-
-https://b1oki.pythonanywhere.com/
+- Backend: https://github.com/b1oki/app.alexandersobyanin.ru
+- Other projects: https://github.com/b1oki/python.alexandersobyanin.ru
 
 ## Available Scripts
 
