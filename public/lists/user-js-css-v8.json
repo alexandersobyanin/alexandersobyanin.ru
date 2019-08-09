@@ -196,6 +196,19 @@
         "autoImportant": false,
         "on": true
       }
+    },
+    {
+      "compiledCss": ".c0155 .c0156, .c0157 .c0159, .c0111 .c0113, .c0111 .c0115, .c0148 .c0168, .c01244.c01248 div, .c01244.c01248 span, .c0183 .c0138, .c0133 .c0134, .c0145 button, .c0143 button, .c0155 button, .c01111 button, .c01121 button, .c01126 button, .c01135 .c01153 .c01154::after, .ch-cherdak .ch-header, .c013 .c015, .c016 a, .c012145 a, .c0131 p, footer, div div, div {color: rgb(102, 102, 102)!important; background-color: rgb(22, 22, 22)!important;}.c0182 .c01324.c01328, .c0182 .c01324.c01328 .c01329 {color: rgb(102, 102, 102)!important; background: none!important;}.c01324.c01328 svg path, .c01244.c01248 svg path, .c0188 svg path {fill: rgb(102, 102, 102)!important;}.c01111 button, .c01121 button, .c01126 button {border: 1px dashed black!important;}.c01145 .c01146:hover, .c0148 .c0149:hover {background-color: rgb(68, 68, 68)!important; box-shadow: none!important;}.c013 .c015 {padding-bottom: 0px!important;}body .AppMountContainer .ContentWrapper .c012 .c013 .c015 .c016 .c019 .slider .slider-frame .slider-list .slider-slide .c0110 a .c0116 {background: rgb(0, 0, 0)!important;}",
+      "css": ".c0155 .c0156,\n.c0157 .c0159,\n.c0111 .c0113,\n.c0111 .c0115,\n.c0148 .c0168,\n.c01244.c01248 div,\n.c01244.c01248 span,\n.c0183 .c0138,\n.c0133 .c0134,\n.c0145 button,\n.c0143 button,\n.c0155 button,\n.c01111 button,\n.c01121 button,\n.c01126 button,\n.c01135 .c01153 .c01154::after,\n.ch-cherdak .ch-header,\n.c013 .c015,\n.c016 a,\n.c012145 a,\n.c0131 p,\nfooter,\ndiv div,\ndiv {\n\tcolor: #666;\n\tbackground-color: #161616;\n}\n.c0182 .c01324.c01328,\n.c0182 .c01324.c01328 .c01329 {\n\tcolor: #666;\n\tbackground: none;\n}\n.c01324.c01328 svg path,\n.c01244.c01248 svg path,\n.c0188 svg path {\n\tfill: #666;\n}\n.c01111 button,\n.c01121 button,\n.c01126 button {\n\tborder: 1px dashed black;\n}\n.c01145 .c01146:hover,\n.c0148 .c0149:hover {\n\tbackground-color: #444;\n\tbox-shadow: none;\n}\n.c013 .c015 {\n\tpadding-bottom: 0;\n}\nbody .AppMountContainer .ContentWrapper .c012 .c013 .c015 .c016 .c019 .slider .slider-frame .slider-list .slider-slide .c0110 a .c0116 {\n\tbackground-image: none;\n\tbackground: #000;\n}",
+      "id": "megafon.tv",
+      "js": "",
+      "libs": [],
+      "options": {
+        "altCSS": false,
+        "altJS": false,
+        "autoImportant": true,
+        "on": true
+      }
     }
   ]
 }
