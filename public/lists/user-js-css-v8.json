@@ -55,8 +55,8 @@
       }
     },
     {
-      "compiledCss": ".underheader-superbanner {display: none!important;}",
-      "css": ".underheader-superbanner {\n\tdisplay: none;\n}",
+      "compiledCss": ".underheader-superbanner, [class^=\"toaster\"] {display: none!important;}",
+      "css": ".underheader-superbanner,\n[class^=\"toaster\"]{\n\tdisplay: none;\n}",
       "id": "kinopoisk.ru/film/*/",
       "js": "if (window.matchMedia(\"screen and (device-width: 2560px) and (display-mode: fullscreen)\").matches) {\n\t// kinopoisk online cinema - 0 step\n\t$('button.movie-online-button').one('click', function(e) {\n\t    e.preventDefault();\n\t    return true;\n\t});\n}",
       "libs": [],
