@@ -34,8 +34,6 @@ class App extends Component {
                         <Articles articles={data.articles}/>
                         <h3>Test Firebase</h3>
                         <Notifications/>
-                        <h3>Test GitHub</h3>
-                        <p>{process.env.REACT_APP_REACT_TEST_GITHUB}</p>
                     </main>
                     <footer>
                         <p>
