@@ -4,10 +4,11 @@ import {YMInitializer} from 'react-yandex-metrika';
 import ReactGA from 'react-ga';
 import ErrorBoundary from './ErrorBoundary'
 import SocialLinkCategory from "./social-links/SocialLinks";
+import Notifications from "./notifications/Notifications";
 import Articles from './article/Article'
 import data from '../assets/StubData'
 
-ReactGA.initialize('UA-24681793-8');
+ReactGA.initialize(process.env.GOOGLE_ANALYTICS);
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
@@ -31,6 +32,10 @@ class App extends Component {
                         </div>
                         <h3>Wall</h3>
                         <Articles articles={data.articles}/>
+                        <h3>Test Firebase</h3>
+                        <Notifications/>
+                        <h3>Test GitHub</h3>
+                        <p>{process.env.REACT_TEST_GITHUB}</p>
                     </main>
                     <footer>
                         <p>
@@ -49,7 +54,7 @@ class App extends Component {
                             </a>
                         </p>
                         <YMInitializer
-                            accounts={[49462669]}
+                            accounts={[process.env.YANDEX_METRIKA]}
                             options={{
                                 clickmap: true,
                                 trackLinks: true,

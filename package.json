@@ -5,6 +5,7 @@
   "homepage": "https://alexandersobyanin.ru",
   "dependencies": {
     "@sentry/browser": "latest",
+    "firebase": "latest",
     "gh-pages": "latest",
     "react": "latest",
     "react-dom": "latest",
