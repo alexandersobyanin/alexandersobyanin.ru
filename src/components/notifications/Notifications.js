@@ -1,4 +1,4 @@
-import React, {Component, useState, useCallback} from "react";
+import React, {Component} from "react";
 import './Notifications.css';
 import {messaging} from "../firebase";
 
