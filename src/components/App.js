@@ -8,7 +8,7 @@ import Notifications from "./notifications/Notifications";
 import Articles from './article/Article'
 import data from '../assets/StubData'
 
-ReactGA.initialize(process.env.GOOGLE_ANALYTICS);
+ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
@@ -35,7 +35,7 @@ class App extends Component {
                         <h3>Test Firebase</h3>
                         <Notifications/>
                         <h3>Test GitHub</h3>
-                        <p>{process.env.REACT_TEST_GITHUB}</p>
+                        <p>{process.env.REACT_APP_REACT_TEST_GITHUB}</p>
                     </main>
                     <footer>
                         <p>
@@ -54,7 +54,7 @@ class App extends Component {
                             </a>
                         </p>
                         <YMInitializer
-                            accounts={[process.env.YANDEX_METRIKA]}
+                            accounts={[process.env.REACT_APP_YANDEX_METRIKA]}
                             options={{
                                 clickmap: true,
                                 trackLinks: true,

@@ -7,7 +7,7 @@ import App from './components/App';
 
 Sentry.init({
     debug: true,
-    dsn: process.env.SENTRY_DSN,
+    dsn: process.env.REACT_APP_SENTRY_DSN,
     release: process.env.REACT_APP_NAME+"@"+process.env.REACT_APP_VERSION,
 
 });
