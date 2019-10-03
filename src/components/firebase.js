@@ -15,7 +15,7 @@ let messaging;
 
 if (firebase.messaging.isSupported()) {
     messaging = firebase.messaging();
-    messaging.usePublicVapidKey(process.env.FIREBASE_PUBLIC_VAPID_KEY);
+    messaging.usePublicVapidKey(process.env.REACT_APP_FIREBASE_PUBLIC_VAPID_KEY);
 }
 
 export {messaging};
