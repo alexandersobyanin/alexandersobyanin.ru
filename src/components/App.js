@@ -8,7 +8,7 @@ import Notifications from "./notifications/Notifications";
 import Articles from './article/Article'
 import data from '../assets/StubData'
 
-ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
+ReactGA.initialize("UA-24681793-8");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
@@ -52,7 +52,7 @@ class App extends Component {
                             </a>
                         </p>
                         <YMInitializer
-                            accounts={[process.env.REACT_APP_YANDEX_METRIKA]}
+                            accounts={[49462669]}
                             options={{
                                 clickmap: true,
                                 trackLinks: true,
