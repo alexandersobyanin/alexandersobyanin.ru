@@ -2,11 +2,9 @@
   "name": "alexandersobyanin",
   "version": "1.0.3-rc",
   "private": true,
-  "homepage": "https://alexandersobyanin.ru",
   "dependencies": {
     "@sentry/browser": "latest",
     "firebase": "latest",
-    "gh-pages": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-ga": "latest",
@@ -22,8 +20,16 @@
     "deploy": "gh-pages --dist build --branch master --dotfiles true --message \"Auto-generated commit\"",
     "eject": "react-scripts eject"
   },
+  "main": "index.js",
+  "repository": "https://github.com/Leocardoso94/push-notification-demo.git",
+  "author": "Leonardo Cardoso <leocardosoti@gmail.com>",
+  "homepage": "https://alexandersobyanin.ru",
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "license": "GNU GPL v3",
+  "devDependencies": {
+    "gh-pages": "latest"
   },
   "browserslist": [
     ">0.2%",
