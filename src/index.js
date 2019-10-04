@@ -8,7 +8,7 @@ import {initializeFirebase} from "./push-notification";
 
 Sentry.init({
     debug: true,
-    dsn: process.env.REACT_APP_SENTRY_DSN,
+    dsn: "https://ff74083e89b442f792d44661e2f498c7@sentry.io/1269741",
     release: process.env.REACT_APP_NAME+"@"+process.env.REACT_APP_VERSION,
 
 });
