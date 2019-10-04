@@ -1,5 +1,6 @@
 // This optional code is used to register a service worker.
 // register() is not called by default.
+// In production, we register a service worker to serve assets from local cache.
 
 // This lets the app load faster on subsequent visits in production, and gives
 // it offline capabilities. However, it also means that developers (and users)
@@ -8,7 +9,7 @@
 // resources are updated in the background.
 
 // To learn more about the benefits of this model and instructions on how to
-// opt-in, read http://bit.ly/CRA-PWA
+// opt-in, read http://bit.ly/CRA-PWA read https://goo.gl/KwvDNy
 
 const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
@@ -28,6 +29,7 @@ export function register(config) {
             // Our service worker won't work if PUBLIC_URL is on a different origin
             // from what our page is served on. This might happen if a CDN is used to
             // serve assets; see https://github.com/facebook/create-react-app/issues/2374
+            // https://github.com/facebookincubator/create-react-app/issues/2374
             return;
         }
 
@@ -43,7 +45,7 @@ export function register(config) {
                 navigator.serviceWorker.ready.then(() => {
                     console.log(
                         'This web app is being served cache-first by a service ' +
-                        'worker. To learn more, visit http://bit.ly/CRA-PWA'
+                        'worker. To learn more, visit https://goo.gl/SC7cgQ and http://bit.ly/CRA-PWA'
                     );
                 });
             } else {
@@ -78,6 +80,11 @@ function registerValidSW(swUrl, config) {
                             if (config && config.onUpdate) {
                                 config.onUpdate(registration);
                             }
+                            // At this point, the old content will have been purged and
+                            // the fresh content will have been added to the cache.
+                            // It's the perfect time to display a "New content is
+                            // available; please refresh." message in your web app.
+                            console.log('New content is available; please refresh.');
                         } else {
                             // At this point, everything has been precached.
                             // It's the perfect time to display a
