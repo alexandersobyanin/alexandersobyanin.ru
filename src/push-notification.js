@@ -34,5 +34,5 @@ export const askForPermissioToReceiveNotifications = async () => {
     }).catch(function (error) {
         console.log("Unable to get permission to notify: ", error);
     });
-    navigator.serviceWorker.addEventListener("messasge", (message) => console.log(message));
+    navigator.serviceWorker.addEventListener("message", (message) => console.log(message));
 };
