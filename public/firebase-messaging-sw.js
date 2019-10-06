@@ -1,4 +1,6 @@
+// The core Firebase JS SDK is always required and must be listed first
 importScripts('https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js');
+// TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries
 importScripts('https://www.gstatic.com/firebasejs/7.1.0/firebase-messaging.js');
 
 firebase.initializeApp({

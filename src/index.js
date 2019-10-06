@@ -1,22 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './index.css';
-import * as Sentry from '@sentry/browser'
 import * as serviceWorker from './serviceWorker';
+
 import App from './components/App';
-import {initializeFirebase} from "./push-notification";
+import Firebase, {FirebaseContext} from './components/Firebase';
+import * as Sentry from '@sentry/browser'
+
 
 Sentry.init({
-    debug: true,
-    dsn: "https://ff74083e89b442f792d44661e2f498c7@sentry.io/1269741",
-    release: process.env.REACT_APP_NAME+"@"+process.env.REACT_APP_VERSION,
+    debug: false,
+    dsn: process.env.REACT_APP_SENTRY_DSN,
+    release: process.env.REACT_APP_NAME + "@" + process.env.REACT_APP_VERSION,
 
 });
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <FirebaseContext.Provider value={new Firebase()}>
+        <App/>
+    </FirebaseContext.Provider>,
+    document.getElementById('root'),
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.register();
-initializeFirebase();
+serviceWorker.unregister();

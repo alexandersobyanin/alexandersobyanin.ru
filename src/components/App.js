@@ -3,9 +3,9 @@ import './App.css';
 import {YMInitializer} from 'react-yandex-metrika';
 import ReactGA from 'react-ga';
 import ErrorBoundary from './ErrorBoundary'
-import SocialLinkCategory from "./social-links/SocialLinks";
-import Notifications from "./notifications/Notifications";
-import Articles from './article/Article'
+import SocialLinkCategory from "./SocialLinks";
+import Index from "./Notifications";
+import Articles from './Article'
 import data from '../assets/StubData'
 
 ReactGA.initialize("UA-24681793-8");
@@ -33,7 +33,7 @@ class App extends Component {
                         <h3>Wall</h3>
                         <Articles articles={data.articles}/>
                         <h3>Test Firebase</h3>
-                        <Notifications/>
+                        <Index/>
                     </main>
                     <footer>
                         <p>

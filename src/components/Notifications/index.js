@@ -1,9 +1,9 @@
 import React, {Component} from "react";
-import './Notifications.css';
-import {askForPermissioToReceiveNotifications} from '../../push-notification';
+import './style.css';
+import {askForPermissioToReceiveNotifications} from './push-notification';
 
 
-class Notifications extends Component {
+class Index extends Component {
     render() {
         return (
             <div>
@@ -16,4 +16,4 @@ class Notifications extends Component {
     }
 }
 
-export default Notifications
+export default Index

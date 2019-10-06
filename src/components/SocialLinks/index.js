@@ -17,7 +17,7 @@ class SocialLinkCategory extends Component {
                                 <p className="icon-group-title">{key}</p>
                             </div>
                             <div className="social-link-column-right">
-                                <SocialLinks SocialLinks={SocialLinkCategories[key]}/>
+                                <Index SocialLinks={SocialLinkCategories[key]}/>
                             </div>
                         </div>
                     ))
@@ -27,7 +27,7 @@ class SocialLinkCategory extends Component {
     }
 }
 
-class SocialLinks extends Component {
+class Index extends Component {
     render() {
         const {SocialLinks} = this.props;
         let links = SocialLinks.map(link =>
