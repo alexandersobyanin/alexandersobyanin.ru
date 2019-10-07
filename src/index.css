@@ -1,5 +1,4 @@
 body {
-    font-family: 'Montserrat', sans-serif;
     color: #F0E7D5;
     background: #555 url('assets/images/asphalt.png');
     margin: 0;
@@ -8,20 +7,22 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+body,
+.regular-font {
+    font-family: 'Montserrat',
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
 .head-font {
     font-family: 'Playfair Display', serif;
 }
 
-.regular-font {
-    font-family: 'Montserrat', sans-serif;
-}
-
+code,
 .code-font {
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: 'IBM Plex Mono', source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 

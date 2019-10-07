@@ -1,6 +1,6 @@
 {
   "name": "alexandersobyanin",
-  "version": "1.0.3-rc",
+  "version": "1.0.4-rc",
   "private": true,
   "dependencies": {
     "@sentry/browser": "latest",
@@ -10,23 +10,21 @@
     "react-ga": "latest",
     "react-router-dom": "latest",
     "react-scripts": "latest",
-    "react-yandex-metrika": "latest"
+    "react-yandex-metrika": "latest",
+    "recompose": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom --passWithNoTests",
     "predeploy": "npm run build",
     "deploy": "gh-pages --dist build --branch master --dotfiles true --message \"Auto-generated commit\"",
     "eject": "react-scripts eject"
   },
   "main": "index.js",
-  "repository": "https://github.com/Leocardoso94/push-notification-demo.git",
-  "author": "Leonardo Cardoso <leocardosoti@gmail.com>",
+  "repository": "https://github.com/b1oki/b1oki.github.io.git",
+  "author": "Alexander Sobyanin <me@alexandersobyanin.ru>",
   "homepage": "https://alexandersobyanin.ru",
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "license": "GNU GPL v3",
   "devDependencies": {
     "gh-pages": "latest"

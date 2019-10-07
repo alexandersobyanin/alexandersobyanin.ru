@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './style.css';
 
 class SocialLinkCategory extends Component {
     render() {
@@ -17,7 +18,7 @@ class SocialLinkCategory extends Component {
                                 <p className="icon-group-title">{key}</p>
                             </div>
                             <div className="social-link-column-right">
-                                <Index SocialLinks={SocialLinkCategories[key]}/>
+                                <SocialLinks SocialLinks={SocialLinkCategories[key]}/>
                             </div>
                         </div>
                     ))
@@ -27,7 +28,7 @@ class SocialLinkCategory extends Component {
     }
 }
 
-class Index extends Component {
+class SocialLinks extends Component {
     render() {
         const {SocialLinks} = this.props;
         let links = SocialLinks.map(link =>

@@ -1,0 +1,13 @@
+.Error-page {
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.Error-page button {
+    padding: 3vmin 10vmin;
+    font-size: larger;
+}

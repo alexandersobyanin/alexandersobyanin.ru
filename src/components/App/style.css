@@ -1,0 +1,46 @@
+.App {
+    text-align: center;
+}
+
+header,
+footer {
+    padding: 0 10vmin;
+}
+
+header {
+    padding-bottom: 1vmin;
+    border-bottom: 1px solid #666;
+}
+
+footer {
+    border-top: 1px solid #666;
+}
+
+.small {
+    font-size: small;
+}
+
+.copyrights {
+    opacity: 0.5;
+}
+
+main {
+    padding: 1vmin 10vmin;
+    max-width: 970px;
+    margin: 0 auto;
+}
+
+a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+a:link,
+a:visited {
+    color: #78B642;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

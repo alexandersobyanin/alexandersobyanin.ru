@@ -1,0 +1,28 @@
+.SocialLinks .social-link-column-left {
+    float: left;
+    margin-left: 30%;
+}
+
+.SocialLinks .social-link-column-right {
+    margin-left: 45%;
+}
+
+.SocialLinks .social-link-column-right p {
+    text-align: left;
+}
+
+.SocialLinks .social-link-column-left p.icon-group-title {
+    color: #F0E7D5;
+    opacity: 0.15;
+    position: relative;
+    bottom: 0.1em;
+}
+
+.SocialLinks a.social-link:hover {
+    text-decoration: none;
+}
+
+.SocialLinks a.social-link svg {
+    height: 64px;
+    width: 64px;
+}
