@@ -27,10 +27,10 @@ const NavigationAuth = ({authUser}) => (
             <Link to={ROUTES.HOME}>Home</Link>
         </li>
         <li>
-            <Link to={ROUTES.PROJECTS}>Projects</Link>
+            <a href={ROUTES.PROJECTS}>Projects</a>
         </li>
         <li>
-            <Link to={ROUTES.LISTS}>Lists and scripts</Link>
+            <a href={ROUTES.LISTS}>Lists and scripts</a>
         </li>
         <li>
             <Link to={ROUTES.ACCOUNT}>Account</Link>
@@ -52,10 +52,10 @@ const NavigationNonAuth = () => (
             <Link to={ROUTES.LANDING}>Landing</Link>
         </li>
         <li>
-            <Link to={ROUTES.PROJECTS}>Projects</Link>
+            <a href={ROUTES.PROJECTS}>Projects</a>
         </li>
         <li>
-            <Link to={ROUTES.LISTS}>Lists and scripts</Link>
+            <a href={ROUTES.LISTS}>Lists and scripts</a>
         </li>
         <li>
             <Link to={ROUTES.SIGN_IN}>Sign In</Link>
