@@ -4,7 +4,7 @@ import Notifications from "../Notifications";
 import Articles from '../Articles'
 import data from '../../assets/StubData'
 
-const Portfolio = () => (
+const Index = () => (
     <div>
         <SocialLinkCategory SocialLinkCategories={data.socialLinks}/>
         <div id="block-home-page">
@@ -22,4 +22,4 @@ const Portfolio = () => (
     </div>
 );
 
-export default Portfolio;
+export default Index;
