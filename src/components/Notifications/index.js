@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import * as firebase from 'firebase/app';
 import 'firebase/messaging';
 
