@@ -22,7 +22,7 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App = () => (
     <ErrorBoundary>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             {/* TODO: extract header */}
             <header>
                 <h2>Alexander Sobyanin</h2>
