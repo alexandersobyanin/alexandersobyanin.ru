@@ -4,7 +4,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {YMInitializer} from "react-yandex-metrika";
 import ReactGA from 'react-ga';
 import ErrorBoundary from "../ErrorBoundary";
-import Navigation from '../Navigation';
+import Header from '../Header';
+import Footer from "../Footer";
 import LandingPage from '../Landing';
 import SignUpPage from '../SignUp';
 import SignInPage from '../SignIn';
@@ -23,14 +24,8 @@ ReactGA.pageview(window.location.pathname + window.location.search);
 const App = () => (
     <ErrorBoundary>
         <Router basename={process.env.PUBLIC_URL}>
-            {/* TODO: extract header */}
-            <header>
-                <h2>Alexander Sobyanin</h2>
-                <h3>Personal Page</h3>
-            </header>
+            <Header/>
             <main>
-                <Navigation/>
-                <hr/>
                 <Route exact path={ROUTES.LANDING} component={LandingPage}/>
                 <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
                 <Route path={ROUTES.SIGN_IN} component={SignInPage}/>
@@ -39,24 +34,7 @@ const App = () => (
                 <Route path={ROUTES.ACCOUNT} component={AccountPage}/>
                 <Route path={ROUTES.ADMIN} component={AdminPage}/>
             </main>
-            {/* TODO: extract footer */}
-            <footer>
-                <p>
-                    &copy;&nbsp;2019&nbsp;by&nbsp;
-                    <a href="//about.me/sobyanin" target="_blank" rel="noopener noreferrer">
-                        Alexander&nbsp;Sobyanin
-                    </a>
-                </p>
-                <p className="copyrights">
-                    Some icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>
-                    {' '}from{' '}
-                    <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-                    {' '}is licensed by{' '}
-                    <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">
-                        CC 3.0 BY
-                    </a>
-                </p>
-            </footer>
+            <Footer/>
             <YMInitializer
                 accounts={[Number(process.env.REACT_APP_YANDEX_METRIKA)]}
                 options={{
