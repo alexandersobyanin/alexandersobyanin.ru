@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Button, Form, Input} from "reactstrap";
 
 import {AuthUserContext} from '../Session';
 import {withFirebase} from '../Firebase';
@@ -95,9 +96,9 @@ class Messages extends Component {
                 {authUser => (
                     <div>
                         {!loading && messages && (
-                            <button type="button" onClick={this.onNextPage}>
+                            <Button onClick={this.onNextPage}>
                                 More
-                            </button>
+                            </Button>
                         )}
 
                         {loading && <div>Loading ...</div>}
@@ -113,18 +114,10 @@ class Messages extends Component {
 
                         {!messages && <div>There are no messages ...</div>}
 
-                        <form
-                            onSubmit={event =>
-                                this.onCreateMessage(event, authUser)
-                            }
-                        >
-                            <input
-                                type="text"
-                                value={text}
-                                onChange={this.onChangeText}
-                            />
-                            <button type="submit">Send</button>
-                        </form>
+                        <Form onSubmit={event => this.onCreateMessage(event, authUser)}>
+                            <Input type="text" value={text} onChange={this.onChangeText}/>
+                            <Button type="submit">Send</Button>
+                        </Form>
                     </div>
                 )}
             </AuthUserContext.Consumer>

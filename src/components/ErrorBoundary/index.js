@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
+import {Button} from 'reactstrap';
 import * as Sentry from '@sentry/browser';
-import './style.css';
-
 
 class ErrorBoundary extends Component {
     constructor(props) {
@@ -14,28 +13,28 @@ class ErrorBoundary extends Component {
     }
 
     componentDidCatch(error, errorInfo) {
-        Sentry.withScope(function (scope) {
+        Sentry.withScope((scope) => {
             scope.setExtras(errorInfo);
             const eventId = Sentry.captureException(error);
-            this.setState({eventId: eventId});
+            this.setState({eventId});
         });
     }
 
     render() {
         if (this.state.hasError) {
-            //render fallback UI
+            // render fallback UI
             return (
-                <div className="Error-page">
-                    <h1>Oops, an error occurred</h1>
-                    <button onClick={() => Sentry.showReportDialog({eventId: this.state.eventId})}>
+                <div className="d-flex flex-column align-items-center">
+                    <Button onClick={() => Sentry.showReportDialog({eventId: this.state.eventId})}
+                            size="lg" color="primary">
                         Report feedback
-                    </button>
+                    </Button>
                 </div>
             );
         }
-        //when there's not an error, render children untouched
+        // when there's not an error, render children untouched
         return this.props.children;
     }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;

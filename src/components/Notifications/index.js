@@ -1,6 +1,7 @@
 import React from "react";
-import * as firebase from 'firebase/app';
 import 'firebase/messaging';
+import * as firebase from 'firebase/app';
+import {Button} from "reactstrap";
 
 const askForPermissioToReceiveNotifications = async () => {
     console.log('Requesting messaging permission');
@@ -31,10 +32,10 @@ const askForPermissioToReceiveNotifications = async () => {
 
 const Notifications = () => (
     <div>
-        <p>Firebase Cloud Messaging</p>
-        <button onClick={askForPermissioToReceiveNotifications}>
+        <h2>Firebase Cloud Messaging</h2>
+        <Button onClick={askForPermissioToReceiveNotifications}>
             Enable push notifications
-        </button>
+        </Button>
     </div>
 );
 

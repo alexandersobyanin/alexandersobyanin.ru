@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import {Switch, Route} from 'react-router-dom';
 import {compose} from 'recompose';
 
@@ -8,7 +8,7 @@ import * as ROLES from '../../constants/roles';
 import * as ROUTES from '../../constants/routes';
 
 const AdminPage = () => (
-    <div>
+    <Fragment>
         <h1>Admin</h1>
         <p>The Admin Page is accessible by every signed in admin user.</p>
 
@@ -16,7 +16,7 @@ const AdminPage = () => (
             <Route exact path={ROUTES.ADMIN_DETAILS} component={UserItem}/>
             <Route exact path={ROUTES.ADMIN} component={UserList}/>
         </Switch>
-    </div>
+    </Fragment>
 );
 
 const condition = authUser =>

@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+
 import Portfolio from "../Portfolio";
 
 const Landing = () => (
-    <div>
+    <Fragment>
         <h1>Landing</h1>
         <Portfolio/>
-    </div>
+    </Fragment>
 );
 
 export default Landing;

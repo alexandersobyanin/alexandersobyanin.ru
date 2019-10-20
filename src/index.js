@@ -1,19 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import './index.css';
-import * as serviceWorker from './serviceWorker';
-
-import App from './components/App';
-import Firebase, {FirebaseContext} from './components/Firebase';
 import * as Sentry from '@sentry/browser'
 
+import './custom.scss';
+import * as serviceWorker from './serviceWorker';
+import App from './components/App';
+import Firebase, {FirebaseContext} from './components/Firebase';
 
 Sentry.init({
-    debug: false,
     dsn: process.env.REACT_APP_SENTRY_DSN,
     release: process.env.REACT_APP_NAME + "@" + process.env.REACT_APP_VERSION,
-
+    debug: false
 });
 
 ReactDOM.render(

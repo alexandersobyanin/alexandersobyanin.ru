@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Button, Input} from "reactstrap";
 
 class MessageItem extends Component {
     constructor(props) {
@@ -34,11 +35,7 @@ class MessageItem extends Component {
         return (
             <li>
                 {editMode ? (
-                    <input
-                        type="text"
-                        value={editText}
-                        onChange={this.onChangeEditText}
-                    />
+                    <Input type="text" value={editText} onChange={this.onChangeEditText}/>
                 ) : (
                     <span>
             <strong>{message.userId}</strong> {message.text}
@@ -50,20 +47,17 @@ class MessageItem extends Component {
                     <span>
             {editMode ? (
                 <span>
-                <button onClick={this.onSaveEditText}>Save</button>
-                <button onClick={this.onToggleEditMode}>Reset</button>
+                <Button onClick={this.onSaveEditText}>Save</Button>
+                <Button onClick={this.onToggleEditMode}>Reset</Button>
               </span>
             ) : (
-                <button onClick={this.onToggleEditMode}>Edit</button>
+                <Button onClick={this.onToggleEditMode}>Edit</Button>
             )}
 
                         {!editMode && (
-                            <button
-                                type="button"
-                                onClick={() => onRemoveMessage(message.uid)}
-                            >
+                            <Button onClick={() => onRemoveMessage(message.uid)}>
                                 Delete
-                            </button>
+                            </Button>
                         )}
           </span>
                 )}

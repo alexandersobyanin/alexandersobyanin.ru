@@ -1,14 +1,15 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {Link} from 'react-router-dom';
+import {Alert, Button, Form, FormGroup, Input} from "reactstrap";
 
 import {withFirebase} from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
 const PasswordForgetPage = () => (
-    <div>
+    <Fragment>
         <h1>PasswordForget</h1>
         <PasswordForgetForm/>
-    </div>
+    </Fragment>
 );
 
 const INITIAL_STATE = {
@@ -48,28 +49,25 @@ class PasswordForgetFormBase extends Component {
         const isInvalid = email === '';
 
         return (
-            <form onSubmit={this.onSubmit}>
-                <input
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email Address"
-                />
-                <button disabled={isInvalid} type="submit">
+            <Form onSubmit={this.onSubmit}>
+                <FormGroup>
+                    <Input name="email" value={this.state.email} onChange={this.onChange}
+                           type="email" placeholder="Email Address"/>
+                </FormGroup>
+                <Button disabled={isInvalid} type="submit">
                     Reset My Password
-                </button>
+                </Button>
 
-                {error && <p>{error.message}</p>}
-            </form>
+                {error && <Alert className="alert-danger">{error.message}</Alert>}
+            </Form>
         );
     }
 }
 
 const PasswordForgetLink = () => (
-    <p>
-        <Link to={ROUTES.PASSWORD_FORGET}>Forgot Password?</Link>
-    </p>
+    <Fragment>
+        <Button tag={Link} to={ROUTES.PASSWORD_FORGET} outline>Forgot Password?</Button>
+    </Fragment>
 );
 
 export default PasswordForgetPage;

@@ -1,22 +1,25 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
+import {Alert, Button, ButtonToolbar, Form, Input, InputGroup} from "reactstrap";
 
+import {withFirebase} from '../Firebase';
 import {SignUpLink} from '../SignUp';
 import {PasswordForgetLink} from '../PasswordForget';
-import {withFirebase} from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
 const SignInPage = () => (
-    <div>
+    <Fragment>
         <h1>SignIn</h1>
         <SignInForm/>
-        <SignInGoogle/>
-        <SignInFacebook/>
-        <SignInTwitter/>
+        <ButtonToolbar className="my-2">
+            <SignInGoogle/>
+            <SignInFacebook/>
+            <SignInTwitter/>
+        </ButtonToolbar>
         <PasswordForgetLink/>
         <SignUpLink/>
-    </div>
+    </Fragment>
 );
 
 const INITIAL_STATE = {
@@ -68,27 +71,29 @@ class SignInFormBase extends Component {
         const isInvalid = password === '' || email === '';
 
         return (
-            <form onSubmit={this.onSubmit}>
-                <input
-                    name="email"
-                    value={email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email Address"
-                />
-                <input
-                    name="password"
-                    value={password}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Password"
-                />
-                <button disabled={isInvalid} type="submit">
-                    Sign In
-                </button>
+            <Form onSubmit={this.onSubmit}>
+                <InputGroup>
+                    <Input
+                        name="email"
+                        value={email}
+                        onChange={this.onChange}
+                        type="email"
+                        placeholder="Email Address"
+                    />
+                    <Input
+                        name="password"
+                        value={password}
+                        onChange={this.onChange}
+                        type="password"
+                        placeholder="Password"
+                    />
+                    <Button disabled={isInvalid} type="submit">
+                        Sign In
+                    </Button>
+                </InputGroup>
 
-                {error && <p>{error.message}</p>}
-            </form>
+                {error && <Alert className="alert-danger">{error.message}</Alert>}
+            </Form>
         );
     }
 }
@@ -130,11 +135,11 @@ class SignInGoogleBase extends Component {
         const {error} = this.state;
 
         return (
-            <form onSubmit={this.onSubmit}>
-                <button type="submit">Sign In with Google</button>
+            <Form onSubmit={this.onSubmit} className="mr-2">
+                <Button type="submit">Sign In with Google</Button>
 
-                {error && <p>{error.message}</p>}
-            </form>
+                {error && <Alert className="alert-danger">{error.message}</Alert>}
+            </Form>
         );
     }
 }
@@ -176,11 +181,11 @@ class SignInFacebookBase extends Component {
         const {error} = this.state;
 
         return (
-            <form onSubmit={this.onSubmit}>
-                <button type="submit">Sign In with Facebook</button>
+            <Form onSubmit={this.onSubmit} className="mr-2">
+                <Button type="submit">Sign In with Facebook</Button>
 
-                {error && <p>{error.message}</p>}
-            </form>
+                {error && <Alert className="alert-danger">{error.message}</Alert>}
+            </Form>
         );
     }
 }
@@ -222,11 +227,11 @@ class SignInTwitterBase extends Component {
         const {error} = this.state;
 
         return (
-            <form onSubmit={this.onSubmit}>
-                <button type="submit">Sign In with Twitter</button>
+            <Form onSubmit={this.onSubmit} className="mr-2">
+                <Button type="submit">Sign In with Twitter</Button>
 
-                {error && <p>{error.message}</p>}
-            </form>
+                {error && <Alert className="alert-danger">{error.message}</Alert>}
+            </Form>
         );
     }
 }

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Button} from "reactstrap";
 
 import {withFirebase} from '../Firebase';
 
@@ -58,12 +59,9 @@ class UserItem extends Component {
               <strong>Username:</strong> {user.username}
             </span>
                         <span>
-              <button
-                  type="button"
-                  onClick={this.onSendPasswordResetEmail}
-              >
-                Send Password Reset
-              </button>
+              <Button onClick={this.onSendPasswordResetEmail}>
+                  Send Password Reset
+              </Button>
             </span>
                     </div>
                 )}

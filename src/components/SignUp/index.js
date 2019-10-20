@@ -1,16 +1,17 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
+import {Alert, Button, CustomInput, Form, FormGroup, Input} from "reactstrap";
 
 import {withFirebase} from '../Firebase';
-import * as ROUTES from '../../constants/routes';
 import * as ROLES from '../../constants/roles';
+import * as ROUTES from '../../constants/routes';
 
 const SignUpPage = () => (
-    <div>
+    <Fragment>
         <h1>SignUp</h1>
         <SignUpForm/>
-    </div>
+    </Fragment>
 );
 
 const INITIAL_STATE = {
@@ -100,57 +101,60 @@ class SignUpFormBase extends Component {
             username === '';
 
         return (
-            <form onSubmit={this.onSubmit}>
-                <input
-                    name="username"
-                    value={username}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Full Name"
-                />
-                <input
-                    name="email"
-                    value={email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email Address"
-                />
-                <input
-                    name="passwordOne"
-                    value={passwordOne}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Password"
-                />
-                <input
-                    name="passwordTwo"
-                    value={passwordTwo}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Confirm Password"
-                />
-                <label>
-                    Admin:
-                    <input
+            <Form onSubmit={this.onSubmit}>
+                <FormGroup>
+                    <Input
+                        name="username"
+                        value={username}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="Full Name"
+                    />
+                    <Input
+                        name="email"
+                        value={email}
+                        onChange={this.onChange}
+                        type="email"
+                        placeholder="Email Address"
+                    />
+                    <Input
+                        name="passwordOne"
+                        value={passwordOne}
+                        onChange={this.onChange}
+                        type="password"
+                        placeholder="Password"
+                    />
+                    <Input
+                        name="passwordTwo"
+                        value={passwordTwo}
+                        onChange={this.onChange}
+                        type="password"
+                        placeholder="Confirm Password"
+                    />
+                </FormGroup>
+                <FormGroup>
+                    <CustomInput
+                        label="Admin"
+                        id="isAdmin"
                         name="isAdmin"
-                        type="checkbox"
+                        type="switch"
                         checked={isAdmin}
                         onChange={this.onChangeCheckbox}
                     />
-                </label>
-                <button disabled={isInvalid} type="submit">
+                </FormGroup>
+                <Button disabled={isInvalid} type="submit" color="primary">
                     Sign Up
-                </button>
+                </Button>
 
-                {error && <p>{error.message}</p>}
-            </form>
+                {error && <Alert className="alert-danger">{error.message}</Alert>}
+            </Form>
         );
     }
 }
 
 const SignUpLink = () => (
     <p>
-        Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+        Don't have an account? <Button tag={Link} to={ROUTES.SIGN_UP}>Sign Up</Button>
     </p>
 );
 

@@ -1,18 +1,8 @@
 {
   "name": "alexandersobyanin",
-  "version": "1.0.4-rc",
+  "version": "1.1.0-rc",
   "private": true,
-  "dependencies": {
-    "@sentry/browser": "latest",
-    "firebase": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "react-ga": "latest",
-    "react-router-dom": "latest",
-    "react-scripts": "latest",
-    "react-yandex-metrika": "latest",
-    "recompose": "latest"
-  },
+  "dependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -27,7 +17,20 @@
   "homepage": "https://alexandersobyanin.ru",
   "license": "GNU GPL v3",
   "devDependencies": {
-    "gh-pages": "latest"
+    "@sentry/browser": "latest",
+    "bootstrap": "latest",
+    "gh-pages": "latest",
+    "firebase": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-ga": "latest",
+    "react-icons": "latest",
+    "react-router-dom": "latest",
+    "react-scripts": "latest",
+    "react-yandex-metrika": "latest",
+    "reactstrap": "latest",
+    "recompose": "latest",
+    "styled-components": "latest"
   },
   "browserslist": [
     ">0.2%",

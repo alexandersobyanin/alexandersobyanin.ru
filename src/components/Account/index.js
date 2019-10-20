@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {compose} from 'recompose';
+import {Alert, Button, Form, Input} from 'reactstrap';
 
 import {
     AuthUserContext,
@@ -32,12 +33,12 @@ const SIGN_IN_METHODS = [
 const AccountPage = () => (
     <AuthUserContext.Consumer>
         {authUser => (
-            <div>
+            <Fragment>
                 <h1>Account: {authUser.email}</h1>
                 <PasswordForgetForm/>
                 <PasswordChangeForm/>
                 <LoginManagement authUser={authUser}/>
-            </div>
+            </Fragment>
         )}
     </AuthUserContext.Consumer>
 );
@@ -127,7 +128,8 @@ class LoginManagementBase extends Component {
                         );
                     })}
                 </ul>
-                {error && error.message}
+
+                {error && <Alert className="alert-danger">{error.message}</Alert>}
             </div>
         );
     }
@@ -141,20 +143,13 @@ const SocialLoginToggle = ({
                                onUnlink,
                            }) =>
     isEnabled ? (
-        <button
-            type="button"
-            onClick={() => onUnlink(signInMethod.id)}
-            disabled={onlyOneLeft}
-        >
+        <Button color="primary" onClick={() => onUnlink(signInMethod.id)} disabled={onlyOneLeft}>
             Deactivate {signInMethod.id}
-        </button>
+        </Button>
     ) : (
-        <button
-            type="button"
-            onClick={() => onLink(signInMethod.provider)}
-        >
+        <Button color="primary" onClick={() => onLink(signInMethod.provider)}>
             Link {signInMethod.id}
-        </button>
+        </Button>
     );
 
 class DefaultLoginToggle extends Component {
@@ -189,23 +184,19 @@ class DefaultLoginToggle extends Component {
             passwordOne !== passwordTwo || passwordOne === '';
 
         return isEnabled ? (
-            <button
-                type="button"
-                onClick={() => onUnlink(signInMethod.id)}
-                disabled={onlyOneLeft}
-            >
+            <Button color="primary" onClick={() => onUnlink(signInMethod.id)} disabled={onlyOneLeft}>
                 Deactivate {signInMethod.id}
-            </button>
+            </Button>
         ) : (
-            <form onSubmit={this.onSubmit}>
-                <input
+            <Form onSubmit={this.onSubmit}>
+                <Input
                     name="passwordOne"
                     value={passwordOne}
                     onChange={this.onChange}
                     type="password"
                     placeholder="New Password"
                 />
-                <input
+                <Input
                     name="passwordTwo"
                     value={passwordTwo}
                     onChange={this.onChange}
@@ -213,10 +204,10 @@ class DefaultLoginToggle extends Component {
                     placeholder="Confirm New Password"
                 />
 
-                <button disabled={isInvalid} type="submit">
+                <Button disabled={isInvalid} type="submit">
                     Link {signInMethod.id}
-                </button>
-            </form>
+                </Button>
+            </Form>
         );
     }
 }
