@@ -19,8 +19,9 @@
   "devDependencies": {
     "@sentry/browser": "latest",
     "bootstrap": "latest",
-    "gh-pages": "latest",
     "firebase": "latest",
+    "gh-pages": "latest",
+    "node-sass": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-ga": "latest",
