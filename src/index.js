@@ -4,8 +4,9 @@ import * as Sentry from '@sentry/browser'
 
 import './custom.scss';
 import * as serviceWorker from './serviceWorker';
-import App from './components/App';
+import ErrorBoundary from "./components/ErrorBoundary";
 import Firebase, {FirebaseContext} from './components/Firebase';
+import App from './components/App';
 
 Sentry.init({
     dsn: process.env.REACT_APP_SENTRY_DSN,
@@ -14,9 +15,11 @@ Sentry.init({
 });
 
 ReactDOM.render(
-    <FirebaseContext.Provider value={new Firebase()}>
-        <App/>
-    </FirebaseContext.Provider>,
+    <ErrorBoundary>
+        <FirebaseContext.Provider value={new Firebase()}>
+            <App/>
+        </FirebaseContext.Provider>
+    </ErrorBoundary>,
     document.getElementById('root'),
 );
 

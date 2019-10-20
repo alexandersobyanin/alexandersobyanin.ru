@@ -4,7 +4,6 @@ import {Container} from 'reactstrap';
 import {YMInitializer} from "react-yandex-metrika";
 import ReactGA from 'react-ga';
 
-import ErrorBoundary from "../ErrorBoundary";
 import {withAuthentication} from '../Session';
 import FourOhFour from "../FourOhFour";
 import Header from '../Header';
@@ -22,7 +21,6 @@ ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App = () => (
-    <ErrorBoundary>
         <Container>
             <Router basename={process.env.PUBLIC_URL}>
                 <Header/>
@@ -54,7 +52,6 @@ const App = () => (
                 />
             </Router>
         </Container>
-    </ErrorBoundary>
 );
 
 export default withAuthentication(App);
