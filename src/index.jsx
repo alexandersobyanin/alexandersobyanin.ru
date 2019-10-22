@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactGA from "react-ga";
 import * as Sentry from '@sentry/browser'
 
 import './custom.scss';
@@ -13,6 +14,7 @@ Sentry.init({
     release: process.env.REACT_APP_NAME + "@" + process.env.REACT_APP_VERSION,
     debug: false
 });
+ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
 
 ReactDOM.render(
     <ErrorBoundary>

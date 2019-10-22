@@ -17,8 +17,6 @@ import AccountPage from '../Account/account';
 import AdminPage from '../Admin/admin';
 import * as ROUTES from '../../constants/routes';
 
-ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
-
 function logPageView() {
     ReactGA.set({page: window.location.pathname + window.location.search});
     ReactGA.pageview(window.location.pathname + window.location.search);
