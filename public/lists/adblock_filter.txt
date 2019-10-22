@@ -3,12 +3,13 @@
 ! Homepage: https://alexandersobyanin.ru
 ! Expires: 1 days
 ! Version: 0.0.3
-@@||alexandersobyanin.ru^$document
-@@||b1oki.github.io.ru^$document
+@@||alexandersobyanin.ru/$document
+@@||b1oki.github.io/$document
 @@||b1oki.noip.me^$document
-@@||b1oki.herokuapp.com^$document
-@@||b1oki.pythonanywhere.com^$document
+@@||b1oki.herokuapp.com/$document
+@@||b1oki.pythonanywhere.com/$document
 ! Если нет подписки, то не исключаем рекламу Yandex из фильтра
 @@|https://music.yandex.ru/$document
 @@|https://megafon.tv/$document
+@@||github.com/$document
 @@|https://cloudapps.herokuapp.com/djvuviewer/?$document
