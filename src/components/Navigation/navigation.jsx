@@ -3,7 +3,7 @@ import {NavLink as RRNavLink} from 'react-router-dom';
 import {Nav, NavItem, NavLink} from "reactstrap";
 
 import {AuthUserContext} from '../Session';
-import SignOutButton from '../SignOut/signOut';
+import SignOutButton from '../SignOut';
 import * as ROLES from '../../constants/roles';
 import * as ROUTES from '../../constants/routes';
 

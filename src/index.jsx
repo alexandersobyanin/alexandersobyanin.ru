@@ -7,7 +7,7 @@ import './custom.scss';
 import * as serviceWorker from './serviceWorker';
 import ErrorBoundary from "./components/ErrorBoundary/errorBoundary";
 import Firebase, {FirebaseContext} from './components/Firebase';
-import App from './components/App/app';
+import App from './components/App';
 
 Sentry.init({
     dsn: process.env.REACT_APP_SENTRY_DSN,

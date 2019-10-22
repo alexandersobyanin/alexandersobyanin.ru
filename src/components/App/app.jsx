@@ -6,15 +6,15 @@ import ReactGA from 'react-ga';
 
 import {withAuthentication} from '../Session';
 import FourOhFour from "../FourOhFour/fourOhFour";
-import Header from '../Header/header';
-import Footer from "../Footer/footer";
-import LandingPage from '../Landing/landing';
-import HomePage from '../Home/home';
-import SignUpPage from '../SignUp/signUp';
-import SignInPage from '../SignIn/signIn';
-import PasswordForgetPage from '../PasswordForget/passwordForget';
-import AccountPage from '../Account/account';
-import AdminPage from '../Admin/admin';
+import Header from '../Header';
+import Footer from "../Footer";
+import LandingPage from '../Landing';
+import HomePage from '../Home';
+import SignUpPage from '../SignUp';
+import SignInPage from '../SignIn';
+import PasswordForgetPage from '../PasswordForget';
+import AccountPage from '../Account';
+import AdminPage from '../Admin';
 import * as ROUTES from '../../constants/routes';
 
 function logPageView() {

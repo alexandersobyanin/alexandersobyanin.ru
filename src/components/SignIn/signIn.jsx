@@ -4,8 +4,8 @@ import {compose} from 'recompose';
 import {Alert, Button, ButtonToolbar, Form, Input, InputGroup} from "reactstrap";
 
 import {withFirebase} from '../Firebase';
-import {SignUpLink} from '../SignUp/signUp';
-import {PasswordForgetLink} from '../PasswordForget/passwordForget';
+import SignUpLink from '../SignUp';
+import PasswordForgetLink from '../PasswordForget';
 import * as ROUTES from '../../constants/routes';
 
 const SignInPage = () => (
