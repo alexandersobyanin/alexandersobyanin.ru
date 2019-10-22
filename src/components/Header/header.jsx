@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import {Collapse, Navbar, NavbarBrand, NavbarToggler} from "reactstrap";
 
-import Navigation from "../Navigation";
+import Navigation from "../Navigation/navigation";
 import * as ROUTES from "../../constants/routes";
 
 const NavigationBar = () => {

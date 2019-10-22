@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MessageItem from './MessageItem';
+import MessageItem from './messageItem';
 
 const MessageList = ({
                          authUser,

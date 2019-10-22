@@ -3,7 +3,7 @@ import {Button, Form, Input} from "reactstrap";
 
 import {AuthUserContext} from '../Session';
 import {withFirebase} from '../Firebase';
-import MessageList from './MessageList';
+import MessageList from './messageList';
 
 class Messages extends Component {
     constructor(props) {
