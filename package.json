@@ -30,8 +30,7 @@
     "react-scripts": "latest",
     "react-yandex-metrika": "latest",
     "reactstrap": "latest",
-    "recompose": "latest",
-    "styled-components": "latest"
+    "recompose": "latest"
   },
   "browserslist": [
     ">0.2%",

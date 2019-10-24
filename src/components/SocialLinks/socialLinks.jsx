@@ -1,13 +1,6 @@
 import React, {Component, Fragment} from 'react';
-import styled from 'styled-components';
 
-const SocialLinkIcon = styled.span`
-    svg {
-        fill: #303030;
-        height: 64px;
-        width: 64px;
-    }
-`;
+import './socialLinks.scss';
 
 class SocialLinkCategory extends Component {
     render() {
@@ -36,7 +29,7 @@ class SocialLinks extends Component {
         let links = SocialLinks.map(link =>
             <a key={link.id} title={link.title} href={link.url}
                target="_blank" rel="noopener noreferrer" className="pr-2 pb-2">
-                <SocialLinkIcon dangerouslySetInnerHTML={{__html: link.svg}}/>
+                <span dangerouslySetInnerHTML={{__html: link.svg}} className="SVGInline"/>
             </a>
         );
         return (
