@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactGA from "react-ga";
-import * as Sentry from '@sentry/browser'
+import * as Sentry from '@sentry/browser';
 
 import './custom.scss';
 import * as serviceWorker from './serviceWorker';
