@@ -10,7 +10,7 @@ const NavigationBar = () => {
     const toggle = () => setIsOpen(!isOpen);
     return (
         <Navbar expand="md" color="dark" dark className="bg-primary">
-            <NavbarBrand tag={Link} to={ROUTES.LANDING}>
+            <NavbarBrand tag={Link} to={ROUTES.HOME}>
                 <span className="h3">Alexander Sobyanin</span>
                 <span>{' '}</span>
                 <span className="h3 text-muted">Personal Page</span>

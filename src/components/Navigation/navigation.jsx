@@ -22,10 +22,10 @@ const Navigation = () => (
 const NavigationAuth = ({authUser}) => (
     <Nav className="ml-auto" navbar>
         <NavItem>
-            <NavLink exact to={ROUTES.LANDING} tag={RRNavLink}>Landing</NavLink>
+            <NavLink exact to={ROUTES.HOME} tag={RRNavLink}>Home</NavLink>
         </NavItem>
         <NavItem>
-            <NavLink to={ROUTES.HOME} tag={RRNavLink}>Home</NavLink>
+            <NavLink to={ROUTES.CHAT} tag={RRNavLink}>Chat</NavLink>
         </NavItem>
         <NavItem>
             <NavLink href={ROUTES.PROJECTS}>Projects</NavLink>
@@ -50,7 +50,7 @@ const NavigationAuth = ({authUser}) => (
 const NavigationNonAuth = () => (
     <Nav className="ml-auto" navbar>
         <NavItem>
-            <NavLink exact to={ROUTES.LANDING} tag={RRNavLink}>Landing</NavLink>
+            <NavLink exact to={ROUTES.HOME} tag={RRNavLink}>Home</NavLink>
         </NavItem>
         <NavItem>
             <NavLink href={ROUTES.PROJECTS}>Projects</NavLink>

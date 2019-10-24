@@ -8,8 +8,8 @@ import {withAuthentication} from '../Session';
 import FourOhFour from "../FourOhFour/fourOhFour";
 import Header from '../Header';
 import Footer from "../Footer";
-import LandingPage from '../Landing';
 import HomePage from '../Home';
+import ChatPage from '../Chat';
 import SignUpPage from '../SignUp';
 import SignInPage from '../SignIn';
 import PasswordForgetPage from '../PasswordForget';
@@ -31,11 +31,11 @@ const App = () => (
                     <Route exact strict path="/:url*"
                            render={props => <Redirect to={`${props.location.pathname}/`}/>}
                     />
-                    <Route exact path={ROUTES.LANDING} component={LandingPage}/>
+                    <Route exact path={ROUTES.HOME} component={HomePage}/>
                     <Route path={ROUTES.SIGN_UP} component={SignUpPage}/>
                     <Route path={ROUTES.SIGN_IN} component={SignInPage}/>
                     <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage}/>
-                    <Route path={ROUTES.HOME} component={HomePage}/>
+                    <Route path={ROUTES.CHAT} component={ChatPage}/>
                     <Route path={ROUTES.ACCOUNT} component={AccountPage}/>
                     <Route path={ROUTES.ADMIN} component={AdminPage}/>
                     <Route component={FourOhFour}/>
