@@ -3,10 +3,11 @@ import {Button} from "reactstrap";
 import {FiLogOut as IconSignOut} from 'react-icons/fi';
 
 import {withFirebase} from '../Firebase';
+import TextIcon from "../TextIcon";
 
 const SignOutButton = ({firebase}) => (
     <Button onClick={firebase.doSignOut}>
-        <IconSignOut title="Sign Out"/><span className="d-none d-sm-inline"> Sign Out</span>
+        <TextIcon IconComponent={IconSignOut} title="Sign Out" titleClassName="d-none d-sm-inline"/>
     </Button>
 );
 

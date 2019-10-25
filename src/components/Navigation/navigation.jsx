@@ -13,6 +13,7 @@ import {
 
 import {AuthUserContext} from '../Session';
 import SignOutButton from '../SignOut';
+import TextIcon from '../TextIcon';
 import * as ROLES from '../../constants/roles';
 import * as ROUTES from '../../constants/routes';
 
@@ -32,33 +33,33 @@ const NavigationAuth = ({authUser}) => (
     <Nav className="ml-auto" navbar>
         <NavItem>
             <NavLink exact to={ROUTES.HOME} tag={RRNavLink}>
-                <IconHome title="Home"/><span className="d-none d-sm-inline"> Home</span>
+                <TextIcon IconComponent={IconHome} title="Home" titleClassName="d-none d-sm-inline"/>
             </NavLink>
         </NavItem>
         <NavItem>
             <NavLink to={ROUTES.CHAT} tag={RRNavLink}>
-                <IconChat title="Chat"/><span className="d-none d-sm-inline"> Chat</span>
+                <TextIcon IconComponent={IconChat} title="Chat" titleClassName="d-none d-sm-inline"/>
             </NavLink>
         </NavItem>
         <NavItem>
             <NavLink href={ROUTES.PROJECTS}>
-                <IconProject title="Projects"/><span className="d-none d-sm-inline"> Projects</span>
+                <TextIcon IconComponent={IconProject} title="Projects" titleClassName="d-none d-sm-inline"/>
             </NavLink>
         </NavItem>
         <NavItem>
             <NavLink href={ROUTES.LISTS}>
-                <IconLists title="Lists"/><span className="d-none d-sm-inline"> Lists</span>
+                <TextIcon IconComponent={IconLists} title="Lists" titleClassName="d-none d-sm-inline"/>
             </NavLink>
         </NavItem>
         <NavItem>
             <NavLink to={ROUTES.ACCOUNT} tag={RRNavLink}>
-                <IconAccount title="Account"/><span className="d-none d-sm-inline"> Account</span>
+                <TextIcon IconComponent={IconAccount} title="Account" titleClassName="d-none d-sm-inline"/>
             </NavLink>
         </NavItem>
         {!!authUser.roles[ROLES.ADMIN] && (
             <NavItem>
                 <NavLink to={ROUTES.ADMIN} tag={RRNavLink}>
-                    <IconAdmin title="Admin"/><span className="d-none d-sm-inline"> Admin</span>
+                    <TextIcon IconComponent={IconAdmin} title="Admin" titleClassName="d-none d-sm-inline"/>
                 </NavLink>
             </NavItem>
         )}
@@ -72,17 +73,17 @@ const NavigationNonAuth = () => (
     <Nav className="ml-auto" navbar>
         <NavItem>
             <NavLink exact to={ROUTES.HOME} tag={RRNavLink}>
-                <IconHome title="Home"/><span className="d-none d-sm-inline"> Home</span>
+                <TextIcon IconComponent={IconHome} title="Home" titleClassName="d-none d-sm-inline"/>
             </NavLink>
         </NavItem>
         <NavItem>
             <NavLink href={ROUTES.PROJECTS}>
-                <IconProject title="Projects"/><span className="d-none d-sm-inline"> Projects</span>
+                <TextIcon IconComponent={IconProject} title="Projects" titleClassName="d-none d-sm-inline"/>
             </NavLink>
         </NavItem>
         <NavItem>
             <NavLink to={ROUTES.SIGN_IN} tag={RRNavLink}>
-                <IconSignIn title="Sign In"/><span className="d-none d-sm-inline"> Sign In</span>
+                <TextIcon IconComponent={IconSignIn} title="Sign In" titleClassName="d-none d-sm-inline"/>
             </NavLink>
         </NavItem>
     </Nav>
