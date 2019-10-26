@@ -1,14 +1,10 @@
 import React, {Component, Fragment} from 'react';
 import {compose} from 'recompose';
-import {Alert, Button, Form, Input} from 'reactstrap';
+import {Alert, Button, Form, FormGroup, Input, Row} from 'reactstrap';
 
-import {
-    AuthUserContext,
-    withAuthorization,
-    withEmailVerification,
-} from '../Session';
+import {AuthUserContext, withAuthorization, withEmailVerification} from '../Session';
 import {withFirebase} from '../Firebase';
-import PasswordForgetForm from '../PasswordForget';
+import {PasswordForgetForm} from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
 
 const SIGN_IN_METHODS = [
@@ -36,6 +32,7 @@ const AccountPage = () => (
             <Fragment>
                 <h1>Account: {authUser.email}</h1>
                 <PasswordForgetForm/>
+                <div className="my-2"/>
                 <PasswordChangeForm/>
                 <LoginManagement authUser={authUser}/>
             </Fragment>
@@ -96,9 +93,9 @@ class LoginManagementBase extends Component {
         const {activeSignInMethods, error} = this.state;
 
         return (
-            <div>
-                Sign In Methods:
-                <ul>
+            <Row className="mt-2">
+                <h5>Sign In Methods:</h5>
+                <FormGroup inline>
                     {SIGN_IN_METHODS.map(signInMethod => {
                         const onlyOneLeft = activeSignInMethods.length === 1;
                         const isEnabled = activeSignInMethods.includes(
@@ -106,7 +103,7 @@ class LoginManagementBase extends Component {
                         );
 
                         return (
-                            <li key={signInMethod.id}>
+                            <span key={signInMethod.id} className="pr-2">
                                 {signInMethod.id === 'password' ? (
                                     <DefaultLoginToggle
                                         onlyOneLeft={onlyOneLeft}
@@ -124,13 +121,13 @@ class LoginManagementBase extends Component {
                                         onUnlink={this.onUnlink}
                                     />
                                 )}
-                            </li>
+                            </span>
                         );
                     })}
-                </ul>
+                </FormGroup>
 
                 {error && <Alert className="alert-danger">{error.message}</Alert>}
-            </div>
+            </Row>
         );
     }
 }
@@ -143,7 +140,7 @@ const SocialLoginToggle = ({
                                onUnlink,
                            }) =>
     isEnabled ? (
-        <Button color="primary" onClick={() => onUnlink(signInMethod.id)} disabled={onlyOneLeft}>
+        <Button color="secondary" onClick={() => onUnlink(signInMethod.id)} disabled={onlyOneLeft}>
             Deactivate {signInMethod.id}
         </Button>
     ) : (
@@ -184,11 +181,11 @@ class DefaultLoginToggle extends Component {
             passwordOne !== passwordTwo || passwordOne === '';
 
         return isEnabled ? (
-            <Button color="primary" onClick={() => onUnlink(signInMethod.id)} disabled={onlyOneLeft}>
+            <Button color="secondary" onClick={() => onUnlink(signInMethod.id)} disabled={onlyOneLeft}>
                 Deactivate {signInMethod.id}
             </Button>
         ) : (
-            <Form onSubmit={this.onSubmit}>
+            <Form onSubmit={this.onSubmit} inline>
                 <Input
                     name="passwordOne"
                     value={passwordOne}

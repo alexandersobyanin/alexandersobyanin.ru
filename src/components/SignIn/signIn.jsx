@@ -1,23 +1,22 @@
 import React, {Component, Fragment} from 'react';
 import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
-import {Alert, Button, ButtonToolbar, Form, Input, InputGroup} from "reactstrap";
+import {Alert, Button, ButtonGroup, Form, FormGroup, Input} from "reactstrap";
 
 import {withFirebase} from '../Firebase';
-import SignUpLink from '../SignUp';
-import PasswordForgetLink from '../PasswordForget';
+import {SignUpLink} from '../SignUp';
+import {PasswordForgetLink} from '../PasswordForget';
 import * as ROUTES from '../../constants/routes';
 
 const SignInPage = () => (
     <Fragment>
         <h1>SignIn</h1>
         <SignInForm/>
-        <ButtonToolbar className="my-2">
+        <ButtonGroup className="my-2">
             <SignInGoogle/>
             <SignInFacebook/>
             <SignInTwitter/>
-        </ButtonToolbar>
-        <PasswordForgetLink/>
+        </ButtonGroup>
         <SignUpLink/>
     </Fragment>
 );
@@ -71,14 +70,15 @@ class SignInFormBase extends Component {
         const isInvalid = password === '' || email === '';
 
         return (
-            <Form onSubmit={this.onSubmit}>
-                <InputGroup>
+            <Form onSubmit={this.onSubmit} inline>
+                <FormGroup>
                     <Input
                         name="email"
                         value={email}
                         onChange={this.onChange}
                         type="email"
                         placeholder="Email Address"
+                        className="mr-2"
                     />
                     <Input
                         name="password"
@@ -86,11 +86,13 @@ class SignInFormBase extends Component {
                         onChange={this.onChange}
                         type="password"
                         placeholder="Password"
+                        className="mr-2"
                     />
-                    <Button disabled={isInvalid} type="submit">
-                        Sign In
-                    </Button>
-                </InputGroup>
+                </FormGroup>
+                <Button disabled={isInvalid} type="submit" color="primary" className="mr-2">
+                    Sign In
+                </Button>
+                <PasswordForgetLink/>
 
                 {error && <Alert className="alert-danger">{error.message}</Alert>}
             </Form>

@@ -42,11 +42,11 @@ class PasswordChangeForm extends Component {
             passwordOne !== passwordTwo || passwordOne === '';
 
         return (
-            <Form onSubmit={this.onSubmit}>
+            <Form onSubmit={this.onSubmit} inline>
                 <Input name="passwordOne" value={passwordOne} onChange={this.onChange}
-                       type="password" placeholder="New Password"/>
+                       type="password" placeholder="New Password" className="mr-2"/>
                 <Input name="passwordTwo" value={passwordTwo} onChange={this.onChange}
-                       type="password" placeholder="Confirm New Password"/>
+                       type="password" placeholder="Confirm New Password" className="mr-2"/>
                 <Button disabled={isInvalid} type="submit">
                     Reset My Password
                 </Button>

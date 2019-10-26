@@ -1,1 +1,1 @@
-export {default} from './signIn';
+export {default, SignInForm, SignInGoogle, SignInFacebook, SignInTwitter} from './signIn';
