@@ -1,22 +1,27 @@
 import React, {Component} from 'react';
+import {Row, Card, CardBody, CardTitle, CardText, CardSubtitle} from 'reactstrap';
 
 class Articles extends Component {
     render() {
         const {articles} = this.props;
         let articles_list = articles.map((article) =>
-            <div key={article.id}>
-                <h3>
-                    {article.title}&nbsp;
-                </h3>
-                <p>{article.text}</p>
-                <p>At {(new Date(article.date)).toDateString()}</p>
-            </div>
+            <Card key={article.id}>
+                <CardBody>
+                    <CardTitle>
+                        {article.title}
+                    </CardTitle>
+                    <CardSubtitle className="small text-muted font-italic font-weight-lighter">
+                        {(new Date(article.date)).toLocaleDateString()}
+                    </CardSubtitle>
+                    <CardText>{article.text}</CardText>
+                </CardBody>
+            </Card>
         );
         return (
-            <div>
+            <Row>
                 <h2>Wall</h2>
                 {articles_list}
-            </div>
+            </Row>
         )
     }
 }
