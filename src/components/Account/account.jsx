@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
-import {compose} from 'recompose';
 import {Alert, Button, Form, FormGroup, Input, Row} from 'reactstrap';
+import {compose} from 'recompose';
 
 import {AuthUserContext, withAuthorization, withEmailVerification} from '../Session';
 import {withFirebase} from '../Firebase';

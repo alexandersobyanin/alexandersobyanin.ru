@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Link, withRouter} from 'react-router-dom';
-import {compose} from 'recompose';
 import {Alert, Button, CustomInput, Form, FormGroup, Input} from "reactstrap";
+import {compose} from 'recompose';
 
 import {withFirebase} from '../Firebase';
 import * as ROLES from '../../constants/roles';

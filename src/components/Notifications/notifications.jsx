@@ -1,7 +1,7 @@
 import React from "react";
+import {Button} from "reactstrap";
 import 'firebase/messaging';
 import * as firebase from 'firebase/app';
-import {Button} from "reactstrap";
 
 const askForPermissioToReceiveNotifications = async () => {
     console.log('Requesting messaging permission');
