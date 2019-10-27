@@ -1,15 +1,8 @@
 import React, {Fragment} from 'react';
 
-import SocialLinkCategory from "../SocialLinks/socialLinks";
-import Notifications from "../Notifications/notifications";
-import Articles from '../Articles';
-import data from '../../assets/stubData';
-
 const Portfolio = () => (
     <Fragment>
-        <SocialLinkCategory SocialLinkCategories={data.socialLinks}/>
-        <Articles articles={data.articles}/>
-        <Notifications/>
+        <h2>Portfolio</h2>
     </Fragment>
 );
 

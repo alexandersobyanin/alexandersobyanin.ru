@@ -19,7 +19,7 @@ class Articles extends Component {
         );
         return (
             <Row>
-                <h2>Wall</h2>
+                <h2>Articles</h2>
                 {articles_list}
             </Row>
         )
