@@ -1,8 +1,8 @@
 import React, {Component, Fragment} from 'react';
 
-import './socialLinks.scss';
+import './onlineProfiles.scss';
 
-class SocialLinkCategory extends Component {
+class OnlineProfiles extends Component {
     render() {
         const {SocialLinkCategories} = this.props;
         return (
@@ -13,7 +13,7 @@ class SocialLinkCategory extends Component {
                         Object.keys(SocialLinkCategories).map((key, index) => (
                             <div key={index} className="flex-fill p-2">
                                 <h3>{key}</h3>
-                                <SocialLinks SocialLinks={SocialLinkCategories[key]}/>
+                                <OnlineProfilesCategory SocialLinks={SocialLinkCategories[key]}/>
                             </div>
                         ))
                     }
@@ -23,7 +23,7 @@ class SocialLinkCategory extends Component {
     }
 }
 
-class SocialLinks extends Component {
+class OnlineProfilesCategory extends Component {
     render() {
         const {SocialLinks} = this.props;
         let links = SocialLinks.map(link =>
@@ -40,4 +40,4 @@ class SocialLinks extends Component {
     }
 }
 
-export default SocialLinkCategory;
+export default OnlineProfiles;

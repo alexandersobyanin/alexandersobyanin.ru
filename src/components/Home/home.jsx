@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 
 import Articles from "../Articles";
 import Notifications from "../Notifications";
-import SocialLinkCategory from "../SocialLinks";
+import SocialLinkCategory from "../OnlineProfiles";
 import Portfolio from "../Portfolio";
 import data from '../../assets/stubData';
 
