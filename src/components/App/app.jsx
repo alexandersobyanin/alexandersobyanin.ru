@@ -7,7 +7,6 @@ import ReactGA from 'react-ga';
 import {withAuthentication} from '../Session';
 import FourOhFour from "../FourOhFour/fourOhFour";
 import Header from '../Header';
-import Footer from "../Footer";
 import HomePage from '../Home';
 import ChatPage from '../Chat';
 import SignUpPage from '../SignUp';
@@ -41,7 +40,6 @@ const App = () => (
                     <Route component={FourOhFour}/>
                 </Switch>
             </Container>
-            <Footer/>
             <YMInitializer
                 accounts={[Number(process.env.REACT_APP_YANDEX_METRIKA)]}
                 options={{
