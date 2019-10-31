@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import {Col, Row} from "reactstrap";
 
 import './onlineProfiles.scss';
 
@@ -8,16 +9,16 @@ class OnlineProfiles extends Component {
         return (
             <Fragment>
                 <h2>Online Profiles</h2>
-                <div className="d-flex flex-row mb-2">
+                <Row className="d-flex flex-row mb-2">
                     {
                         Object.keys(SocialLinkCategories).map((key, index) => (
-                            <div key={index} className="flex-fill p-2">
+                            <Col key={index}>
                                 <h3>{key}</h3>
                                 <OnlineProfilesCategory SocialLinks={SocialLinkCategories[key]}/>
-                            </div>
+                            </Col>
                         ))
                     }
-                </div>
+                </Row>
             </Fragment>
         )
     }
@@ -33,9 +34,9 @@ class OnlineProfilesCategory extends Component {
             </a>
         );
         return (
-            <div className="d-flex flex-row flex-wrap">
+            <Col className="d-flex flex-row flex-wrap">
                 {links}
-            </div>
+            </Col>
         )
     }
 }
