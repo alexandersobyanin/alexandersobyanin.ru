@@ -11,9 +11,12 @@ const NavigationBar = () => {
     return (
         <Navbar expand="md" color="dark" dark className="bg-primary">
             <NavbarBrand tag={Link} to={ROUTES.HOME}>
-                <span className="h3">Alexander Sobyanin</span>
-                <span>{' '}</span>
-                <span className="h3 text-muted">Personal Page</span>
+                <span className="h3">
+                    <span className="d-none d-sm-inline">Alexander </span>
+                    Sobyanin
+                </span>
+                <span className="d-none d-sm-inline">{' '}</span>
+                <span className="h3 text-muted d-none d-sm-inline">Personal Page</span>
             </NavbarBrand>
             <NavbarToggler onClick={toggle}/>
             <Collapse isOpen={isOpen} navbar>
