@@ -4,6 +4,7 @@ import {Nav, NavItem, NavLink} from "reactstrap";
 import {
     FiHome as IconHome,
     FiMessageSquare as IconChat,
+    FiExternalLink as IconProfile,
     FiCodepen as IconProject,
     FiList as IconLists,
     FiUser as IconAccount,
@@ -34,6 +35,11 @@ const NavigationAuth = ({authUser}) => (
         <NavItem>
             <NavLink exact to={ROUTES.HOME} tag={RRNavLink}>
                 <TextIcon IconComponent={IconHome} title="Home" titleClassName="d-none d-sm-inline"/>
+            </NavLink>
+        </NavItem>
+        <NavItem>
+            <NavLink to={ROUTES.PROFILES} tag={RRNavLink}>
+                <TextIcon IconComponent={IconProfile} title="Profiles" titleClassName="d-none d-sm-inline"/>
             </NavLink>
         </NavItem>
         <NavItem>

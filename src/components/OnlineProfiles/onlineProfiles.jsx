@@ -1,14 +1,17 @@
 import React, {Component, Fragment} from 'react';
 import {Col, Row} from "reactstrap";
+import {compose} from "recompose";
 
+import {withAuthorization, withEmailVerification} from "../Session";
 import './onlineProfiles.scss';
+import data from "../../assets/stubData";
 
 class OnlineProfiles extends Component {
     render() {
-        const {SocialLinkCategories} = this.props;
+        let SocialLinkCategories = data.socialLinks;
         return (
             <Fragment>
-                <h2>Online Profiles</h2>
+                <h1>Online Profiles</h1>
                 <Row className="d-flex flex-row mb-2">
                     {
                         Object.keys(SocialLinkCategories).map((key, index) => (
@@ -41,4 +44,9 @@ class OnlineProfilesCategory extends Component {
     }
 }
 
-export default OnlineProfiles;
+const condition = authUser => !!authUser;
+
+export default compose(
+    withEmailVerification,
+    withAuthorization(condition),
+)(OnlineProfiles);
