@@ -44,7 +44,8 @@ class SignUpFormBase extends Component {
         const {username, email, passwordOne, isAdmin} = this.state;
         const roles = {};
 
-        if (isAdmin) {
+        // Отключил регистрацию администратором
+        if (false && isAdmin) {
             roles[ROLES.ADMIN] = ROLES.ADMIN;
         }
 
