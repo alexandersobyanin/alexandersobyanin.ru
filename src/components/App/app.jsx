@@ -15,6 +15,7 @@ import SignInPage from '../SignIn';
 import PasswordForgetPage from '../PasswordForget';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
+import Advertisment from "../Advertisment";
 import * as ROUTES from '../../constants/routes';
 
 function logPageView() {
@@ -39,6 +40,7 @@ const App = () => (
                     <Route path={ROUTES.PROFILES} component={OnlineProfiles}/>
                     <Route path={ROUTES.ACCOUNT} component={AccountPage}/>
                     <Route path={ROUTES.ADMIN} component={AdminPage}/>
+                    <Route path={ROUTES.ADVERTISMENT} component={Advertisment}/>
                     <Route component={FourOhFour}/>
                 </Switch>
             </Container>
