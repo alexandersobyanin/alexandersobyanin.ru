@@ -9,7 +9,6 @@ import {
     FiList as IconLists,
     FiUser as IconAccount,
     FiAlertTriangle as IconAdmin,
-    FiDollarSign as IconAdvertisment,
     FiLogIn as IconSignIn
 } from 'react-icons/fi';
 
@@ -70,11 +69,6 @@ const NavigationAuth = ({authUser}) => (
                 </NavLink>
             </NavItem>
         )}
-        <NavItem>
-            <NavLink to={ROUTES.ADVERTISMENT} tag={RRNavLink}>
-                <TextIcon IconComponent={IconAdvertisment} title="Advertisment" titleClassName="d-none d-sm-inline"/>
-            </NavLink>
-        </NavItem>
         <NavItem>
             <SignOutButton/>
         </NavItem>
