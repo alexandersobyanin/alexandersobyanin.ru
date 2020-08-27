@@ -55,6 +55,19 @@
       }
     },
     {
+      "compiledCss": ".page-content > div:nth-child(3) > div > div > div {display: none!important;}",
+      "css": ".page-content > div:nth-child(3) > div > div > div\n{\n\tdisplay: none;\n}",
+      "id": "kinopoisk.ru",
+      "js": "",
+      "libs": [],
+      "options": {
+        "altCSS": false,
+        "altJS": false,
+        "autoImportant": false,
+        "on": true
+      }
+    },
+    {
       "compiledCss": "",
       "css": "",
       "id": "kinopoisk.ru/film/*/",
