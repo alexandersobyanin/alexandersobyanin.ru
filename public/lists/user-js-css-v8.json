@@ -55,8 +55,8 @@
       }
     },
     {
-      "compiledCss": ".underheader-superbanner, [class^=\"toaster\"], .page-content > div:nth-child(3) > div > div > div {display: none!important;}",
-      "css": ".page-content > div:nth-child(3) > div > div > div\n{\n\tdisplay: none;\n}\n.underheader-superbanner,\n[class^=\"toaster\"]{\n\tdisplay: none;\n}",
+      "compiledCss": ".page-content > div:nth-child(3) > div > div > div, .underheader-superbanner, [class^=\"toaster\"] {display: none!important;}",
+      "css": ".page-content > div:nth-child(3) > div > div > div,\n.underheader-superbanner,\n[class^=\"toaster\"]\n{\n\tdisplay: none;\n}",
       "id": "kinopoisk.ru",
       "js": "",
       "libs": [],
@@ -94,9 +94,22 @@
       }
     },
     {
-      "compiledCss": "@media screen and (device-width: 2560px) and (display-mode: fullscreen) {video {height: 135%!important; position: relative!important; top: -190px!important; left: 0px!important;} }",
-      "css": "@media screen and (device-width: 2560px) and (display-mode: fullscreen) {\n\tvideo {\n\t\theight: 135%;\n    \tposition: relative;\n    \ttop: -190px;\n    \tleft: 0px;\n\t}\n}",
-      "id": "megafon.tv/movies/vods/",
+      "compiledCss": "",
+      "css": "",
+      "id": "ott-widget.kinopoisk.ru/v1/kp/*",
+      "js": "// kinopoisk online cinema - 2nd step\nfunction open_iframe() {\n\tconsole.log('search iframes');\n\tlet iframes = document.getElementsByTagName('iframe');\n\tfor (var i = 0; i < iframes.length; i++) {\n\t\tlet url = iframes[i].src;\n\t\tconsole.log('find iframe with url ' + url);\n\t\tif (url.indexOf(need_url_substring) !== -1) {\n\t\t\tconsole.log('find needed domain ' + need_url_substring);\n\t\t\tlet win = window.open(url, '_top');\n\t\t\twin.blur();\n\t\t\tconsole.log('open win');\n\t\t\tif (!!win) {\n\t\t\t\tconsole.log('stop timer ' + timerId);\n\t\t\t\tclearInterval(timerId);\n\t\t\t}\n\t\t}\n\t}\n}\n\nif (window.matchMedia(\"screen and (device-width: 2560px) and (display-mode: fullscreen)\").matches) {\nconsole.log('loaded userscript');\nvar need_url_substring = 'yastatic.net/yandex-video-player-iframe-api-bundles/';\nvar timerId = setInterval(open_iframe, 1000);\nconsole.log(timerId);\n}",
+      "libs": [],
+      "options": {
+        "altCSS": false,
+        "altJS": false,
+        "autoImportant": false,
+        "on": true
+      }
+    },
+    {
+      "compiledCss": "@media screen and (device-width: 2560px) and (display-mode: fullscreen) {.Player {height: 135%!important; top: -190px!important; overflow-y: hidden!important;}div {overflow-y: hidden!important;} }",
+      "css": "/* kinopoisk online cinema - 3rd step */\n@media screen and (device-width: 2560px) and (display-mode: fullscreen) {\n\t.Player {\n\t\theight: 135%;\n    \ttop: -190px;\n    \toverflow-y: hidden;\n\t}\n\tdiv {\n\t\toverflow-y: hidden;\n\t}\n}",
+      "id": "yastatic.net",
       "js": "",
       "libs": [],
       "options": {
@@ -107,15 +120,15 @@
       }
     },
     {
-      "compiledCss": "",
-      "css": "",
-      "id": "ott-widget.kinopoisk.ru/v1/kp/*",
-      "js": "// kinopoisk online cinema - 2nd step\nfunction open_iframe() {\n\tconsole.log('search iframes');\n\tlet iframes = document.getElementsByTagName('iframe');\n\tfor (var i = 0; i < iframes.length; i++) {\n\t\tlet url = iframes[i].src;\n\t\tconsole.log('find iframe with url ' + url);\n\t\tif (url.indexOf(need_url_substring) !== -1) {\n\t\t\tconsole.log('find needed domain ' + need_url_substring);\n\t\t\tlet win = window.open(url, '_top');\n\t\t\twin.blur();\n\t\t\tconsole.log('open win');\n\t\t\tif (!!win) {\n\t\t\t\tconsole.log('stop timer ' + timerId);\n\t\t\t\tclearInterval(timerId);\n\t\t\t}\n\t\t}\n\t}\n}\n\nif (window.matchMedia(\"screen and (device-width: 2560px) and (display-mode: fullscreen)\").matches) {\nconsole.log('loaded userscript');\nvar need_url_substring = 'yastatic.net/yandex-video-player-iframe-api-bundles/';\nvar timerId = setInterval(open_iframe, 1000);\nconsole.log(timerId);\n}",
+      "compiledCss": "@media screen and (device-width: 2560px) and (display-mode: fullscreen) {video {height: 135%!important; position: relative!important; top: -190px!important; left: 0px!important;} }",
+      "css": "@media screen and (device-width: 2560px) and (display-mode: fullscreen) {\n\tvideo {\n\t\theight: 135%;\n    \tposition: relative;\n    \ttop: -190px;\n    \tleft: 0px;\n\t}\n}",
+      "id": "megafon.tv/movies/vods/",
+      "js": "",
       "libs": [],
       "options": {
         "altCSS": false,
         "altJS": false,
-        "autoImportant": false,
+        "autoImportant": true,
         "on": true
       }
     },
@@ -159,19 +172,6 @@
       }
     },
     {
-      "compiledCss": "@media screen and (device-width: 2560px) and (display-mode: fullscreen) {.Player {height: 135%!important; top: -190px!important; overflow-y: hidden!important;}div {overflow-y: hidden!important;} }",
-      "css": "/* kinopoisk online cinema - 3rd step */\n@media screen and (device-width: 2560px) and (display-mode: fullscreen) {\n\t.Player {\n\t\theight: 135%;\n    \ttop: -190px;\n    \toverflow-y: hidden;\n\t}\n\tdiv {\n\t\toverflow-y: hidden;\n\t}\n}",
-      "id": "yastatic.net",
-      "js": "",
-      "libs": [],
-      "options": {
-        "altCSS": false,
-        "altJS": false,
-        "autoImportant": true,
-        "on": true
-      }
-    },
-    {
       "compiledCss": ".user-speed-buttons {color: rgb(144, 144, 144)!important; background-color: rgb(40, 40, 40)!important; text-decoration: none!important; border: none!important; height: 20px!important; margin-left: 10px!important;}.user-speed-buttons:hover {color: rgb(40, 40, 40)!important; background-color: rgb(144, 144, 144)!important; text-decoration: none!important; border: none!important; height: 20px!important; margin-left: 10px!important;}",
       "css": ".user-speed-buttons {\n\tcolor: #909090;\n\tbackground-color: #282828;\n\ttext-decoration: none;\n\tborder: none;\n\theight: 20px;\n\tmargin-left: 10px;\n}\n.user-speed-buttons:hover {\n\tcolor: #282828;\n\tbackground-color: #909090;\n\ttext-decoration: none;\n\tborder: none;\n\theight: 20px;\n\tmargin-left: 10px;\n}",
       "id": "youtube.com/watch?*",
@@ -182,32 +182,6 @@
         "altJS": false,
         "autoImportant": false,
         "on": true
-      }
-    },
-    {
-      "compiledCss": "img {opacity: 0.3!important;}footer, footer a, footer p, div > button, .ContentWrapper > div > div > div[style] > div > div > a, div a[match], div, h3, h1, span {color: rgb(102, 102, 102)!important; background-color: rgb(22, 22, 22)!important; background-blend-mode: multiply!important;}.slider a[match] > div, a div {background-color: rgba(22, 22, 22, 0)!important; background-blend-mode: multiply!important;}.slider a[match] > div:first-child, a[match] > div, a div[style] {background-color: rgb(22, 22, 22)!important; background-blend-mode: multiply!important;}.tab-content > div > div > div::after, .c01135 .c01153 .c01154::after, .ch-cherdak .ch-header, .c013 .c015, .c016 a, .c012145 a, .c0131 p {color: rgb(102, 102, 102)!important; background-color: rgb(22, 22, 22)!important; background-blend-mode: multiply!important; background-image: none!important;}div > div[role=\"presentation\"], div > div[role=\"presentation\"] div:not(.c0185):not(.rangeslider__handle), div > div[role=\"presentation\"] button, div > div[role=\"presentation\"] span, .c0118, .c0172, .c0182, .c01251 {color: rgb(102, 102, 102)!important; background-color: rgba(22, 22, 22, 0.3)!important; background-blend-mode: multiply!important;}div > div[role=\"presentation\"], div > div[role=\"presentation\"] div:first-child:not(.c0185):not(.rangeslider__handle) {background: none rgba(22, 22, 22, 0)!important; background-blend-mode: multiply!important;}.c01324.c01328 svg path, .c01244.c01248 svg path, .c0188 svg path, path {stroke: rgb(68, 68, 68)!important; fill: rgb(102, 102, 102)!important;}.c01111 button, .c01121 button, .c01126 button {border: 1px dashed black!important;}.c01145 .c01146:hover, .c0148 .c0149:hover {background-color: rgb(68, 68, 68)!important; background-blend-mode: multiply!important; box-shadow: none!important;}.c013 .c015 {padding-bottom: 0px!important;}body .AppMountContainer .ContentWrapper .c012 .c013 .c015 .c016 .c019 .slider .slider-frame .slider-list .slider-slide .c0110 a .c0116 {background-color: rgb(22, 22, 22)!important; background-blend-mode: multiply!important;}.rangeslider .rangeslider__handle, .c01260 .rangeslider .rangeslider__handle, .c01265 .rangeslider .rangeslider__handle, .rangeslider .rangeslider__handle {background-color: rgb(102, 102, 102)!important; background-blend-mode: multiply!important;}",
-      "css": "img {\n\topacity: 0.3;\n}\nfooter,\nfooter a,\nfooter p,\ndiv > button,\n.ContentWrapper > div > div > div[style] > div > div > a,\ndiv a[match],\ndiv,\nh3,\nh1,\nspan {\n\tcolor: #666;\n\tbackground-color: #161616;\n\tbackground-blend-mode: multiply;\n}\n.slider a[match] > div,\na div {\n\tbackground-color: #161616;\n\tbackground-color: rgba(22,22,22,0);\n\tbackground-blend-mode: multiply;\n}\n.slider a[match] > div:first-child,\na[match] > div,\na div[style] {\n\tbackground-color: #161616;\n\tbackground-blend-mode: multiply;\n}\n.tab-content > div > div > div:after,\n.c01135 .c01153 .c01154::after,\n.ch-cherdak .ch-header,\n.c013 .c015,\n.c016 a,\n.c012145 a,\n.c0131 p {\n\tcolor: #666;\n\tbackground-color: #161616;\n\tbackground-blend-mode: multiply;\n\tbackground-image: none;\n}\ndiv > div[role=\"presentation\"],\ndiv > div[role=\"presentation\"] div:not(.c0185):not(.rangeslider__handle),\ndiv > div[role=\"presentation\"] button,\ndiv > div[role=\"presentation\"] span,\n.c0118,\n.c0172,\n.c0182,\n.c01251 {\n\tcolor: #666;\n\tbackground-color: #161616;\n\tbackground-color: rgba(22, 22, 22, 0.3);\n\tbackground-blend-mode: multiply;\n}\ndiv > div[role=\"presentation\"],\ndiv > div[role=\"presentation\"] div:first-child:not(.c0185):not(.rangeslider__handle) {\n\tbackground: none;\n\tbackground-color: #161616;\n\tbackground-color: rgba(22,22,22,0);\n\tbackground-blend-mode: multiply;\n}\n.c01324.c01328 svg path,\n.c01244.c01248 svg path,\n.c0188 svg path,\npath {\n\tstroke: #444;\n\tfill: #666;\n}\n.c01111 button,\n.c01121 button,\n.c01126 button {\n\tborder: 1px dashed black;\n}\n.c01145 .c01146:hover,\n.c0148 .c0149:hover {\n\tbackground-color: #444;\n\tbackground-blend-mode: multiply;\n\tbox-shadow: none;\n}\n.c013 .c015 {\n\tpadding-bottom: 0;\n}\nbody .AppMountContainer .ContentWrapper .c012 .c013 .c015 .c016 .c019 .slider .slider-frame .slider-list .slider-slide .c0110 a .c0116 {\n\tbackground-color: #161616;\n\tbackground-blend-mode: multiply;\n}\n.rangeslider .rangeslider__handle,\n.c01260 .rangeslider .rangeslider__handle,\n.c01265 .rangeslider .rangeslider__handle,\n.rangeslider .rangeslider__handle\n{\n\tbackground-color: #666;\n\tbackground-blend-mode: multiply;\n}",
-      "id": "megafon.tv",
-      "js": "",
-      "libs": [],
-      "options": {
-        "altCSS": false,
-        "altJS": false,
-        "autoImportant": true,
-        "on": true
-      }
-    },
-    {
-      "compiledCss": ".kr-view {background-color: rgb(10, 10, 13)!important; color: rgb(78, 78, 80)!important;}.kr-text {color: rgb(78, 78, 80)!important;}.knightrider-scrollview-scrollelement > div > div > div > div > div > div > div > div > div:nth-child(3) {background-color: rgb(26, 26, 29)!important; color: rgb(78, 78, 80)!important;}.knightrider-scrollview-scrollelement > div > div > div > div > div > div > div > div > div:nth-child(3) .kr-view {background-color: rgb(26, 26, 29)!important;}.knightrider-scrollview-scrollelement .react-dialog-box .kr-view {background-color: rgb(26, 26, 29)!important;}",
-      "css": ".kr-view {\n\tbackground-color: #0a0a0d;\n\tcolor: #4e4e50;\n}\n.kr-text {\n\tcolor: #4e4e50;\n}\n.knightrider-scrollview-scrollelement > div > div > div > div > div > div > div > div > div:nth-child(3) {\n\tbackground-color: #1a1a1d;\n\tcolor: #4e4e50;\n}\n.knightrider-scrollview-scrollelement > div > div > div > div > div > div > div > div > div:nth-child(3) .kr-view {\n\tbackground-color: #1a1a1d;\n}\n.knightrider-scrollview-scrollelement .react-dialog-box .kr-view {\n\tbackground-color: #1a1a1d;\n}",
-      "id": "meistertask.com/app/project/, meistertask.com/app/task/",
-      "js": "",
-      "libs": [],
-      "options": {
-        "altCSS": false,
-        "altJS": false,
-        "autoImportant": true,
-        "on": false
       }
     }
   ]
