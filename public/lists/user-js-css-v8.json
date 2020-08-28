@@ -55,8 +55,8 @@
       }
     },
     {
-      "compiledCss": ".page-content > div:nth-child(3) > div > div > div {display: none!important;}",
-      "css": ".page-content > div:nth-child(3) > div > div > div\n{\n\tdisplay: none;\n}",
+      "compiledCss": ".underheader-superbanner, [class^=\"toaster\"], .page-content > div:nth-child(3) > div > div > div {display: none!important;}",
+      "css": ".page-content > div:nth-child(3) > div > div > div\n{\n\tdisplay: none;\n}\n.underheader-superbanner,\n[class^=\"toaster\"]{\n\tdisplay: none;\n}",
       "id": "kinopoisk.ru",
       "js": "",
       "libs": [],
@@ -208,19 +208,6 @@
         "altJS": false,
         "autoImportant": true,
         "on": false
-      }
-    },
-    {
-      "compiledCss": ".underheader-superbanner, [class^=\"toaster\"] {display: none!important;}",
-      "css": ".underheader-superbanner,\n[class^=\"toaster\"]{\n\tdisplay: none;\n}",
-      "id": "kinopoisk.ru",
-      "js": "",
-      "libs": [],
-      "options": {
-        "altCSS": false,
-        "altJS": false,
-        "autoImportant": false,
-        "on": true
       }
     }
   ]
