@@ -10,6 +10,7 @@ import Header from '../Header';
 import HomePage from '../Home';
 import ChatPage from '../Chat';
 import OnlineProfiles from "../OnlineProfiles";
+import Reader from "../Reader";
 import SignUpPage from '../SignUp';
 import SignInPage from '../SignIn';
 import PasswordForgetPage from '../PasswordForget';
@@ -37,6 +38,7 @@ const App = () => (
                     <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage}/>
                     <Route path={ROUTES.CHAT} component={ChatPage}/>
                     <Route path={ROUTES.PROFILES} component={OnlineProfiles}/>
+                    <Route path={ROUTES.READER} component={Reader}/>
                     <Route path={ROUTES.ACCOUNT} component={AccountPage}/>
                     <Route path={ROUTES.ADMIN} component={AdminPage}/>
                     <Route component={FourOhFour}/>
