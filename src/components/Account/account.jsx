@@ -16,6 +16,7 @@ const SIGN_IN_METHODS = [
         id: 'google.com',
         provider: 'googleProvider',
     },
+/*
     {
         id: 'facebook.com',
         provider: 'facebookProvider',
@@ -24,6 +25,7 @@ const SIGN_IN_METHODS = [
         id: 'twitter.com',
         provider: 'twitterProvider',
     },
+*/
 ];
 
 const AccountPage = () => (
