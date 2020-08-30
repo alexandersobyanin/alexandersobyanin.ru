@@ -13,13 +13,21 @@ class Messages extends Component {
             text: '',
             loading: false,
             messages: [],
+            users: [],
             limit: 5,
         };
     }
 
     componentDidMount() {
+        this.onUsersList();
         this.onListenForMessages();
     }
+
+    onUsersList = () => {
+        this.props.firebase.users().on('value', snapshot => {
+            this.setState({users: snapshot.val()})
+        });
+    };
 
     onListenForMessages = () => {
         this.setState({loading: true});
@@ -35,6 +43,7 @@ class Messages extends Component {
                     const messageList = Object.keys(messageObject).map(key => ({
                         ...messageObject[key],
                         uid: key,
+                        user: this.state.users[messageObject[key].userId],
                     }));
 
                     this.setState({
@@ -48,6 +57,7 @@ class Messages extends Component {
     };
 
     componentWillUnmount() {
+        this.props.firebase.users().off();
         this.props.firebase.messages().off();
     }
 

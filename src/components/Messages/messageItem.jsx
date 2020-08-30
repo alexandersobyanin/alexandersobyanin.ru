@@ -38,7 +38,7 @@ class MessageItem extends Component {
                     <Input type="text" value={editText} onChange={this.onChangeEditText}/>
                 ) : (
                     <span>
-            <strong>{message.userId}</strong> {message.text}
+            <strong>{message.user.username}</strong>: {message.text}
                         {message.editedAt && <span>(Edited)</span>}
           </span>
                 )}
