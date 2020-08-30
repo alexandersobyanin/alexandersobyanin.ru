@@ -1,6 +1,5 @@
 let Counters = {
     SocialLinksCounter: 0,
-    ArticlesCounter: 0
 };
 
 /**
@@ -11,14 +10,6 @@ function UniqueId(counter) {
 }
 
 export default {
-    'articles': [
-        {
-            'id': UniqueId('ArticlesCounter'),
-            'date': '2018-10-01T19:30:00.000Z',
-            'title': 'Moved to React',
-            'text': 'This website powered by ReactJS'
-        }
-    ],
     'socialLinks': {
         'General': [
             {
