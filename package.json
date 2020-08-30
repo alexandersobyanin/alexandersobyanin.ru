@@ -26,6 +26,7 @@
     "react-dom": "latest",
     "react-ga": "latest",
     "react-icons": "latest",
+    "react-markdown": "latest",
     "react-router-dom": "latest",
     "react-scripts": "latest",
     "react-yandex-metrika": "latest",

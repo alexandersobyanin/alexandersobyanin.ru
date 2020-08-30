@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Row, Card, CardBody, CardTitle, CardText, CardSubtitle} from 'reactstrap';
+import ReactMarkdown from 'react-markdown';
 
 class Articles extends Component {
     render() {
@@ -13,7 +14,7 @@ class Articles extends Component {
                     <CardSubtitle className="small text-muted font-italic font-weight-lighter">
                         {(new Date(article.date)).toLocaleDateString()}
                     </CardSubtitle>
-                    <CardText>{article.text}</CardText>
+                    <ReactMarkdown source={article.text} renderers={{root: CardText, paragraph: 'span'}} />
                 </CardBody>
             </Card>
         );
