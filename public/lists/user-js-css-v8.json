@@ -60,6 +60,7 @@
       "id": "kinopoisk.ru",
       "js": "",
       "libs": [],
+      "name": "",
       "options": {
         "altCSS": false,
         "altJS": false,
@@ -94,32 +95,6 @@
       }
     },
     {
-      "compiledCss": "",
-      "css": "",
-      "id": "ott-widget.kinopoisk.ru/v1/kp/*",
-      "js": "// kinopoisk online cinema - 2nd step\nfunction open_iframe() {\n\tconsole.log('search iframes');\n\tlet iframes = document.getElementsByTagName('iframe');\n\tfor (var i = 0; i < iframes.length; i++) {\n\t\tlet url = iframes[i].src;\n\t\tconsole.log('find iframe with url ' + url);\n\t\tif (url.indexOf(need_url_substring) !== -1) {\n\t\t\tconsole.log('find needed domain ' + need_url_substring);\n\t\t\tlet win = window.open(url, '_top');\n\t\t\twin.blur();\n\t\t\tconsole.log('open win');\n\t\t\tif (!!win) {\n\t\t\t\tconsole.log('stop timer ' + timerId);\n\t\t\t\tclearInterval(timerId);\n\t\t\t}\n\t\t}\n\t}\n}\n\nif (window.matchMedia(\"screen and (device-width: 2560px) and (display-mode: fullscreen)\").matches) {\nconsole.log('loaded userscript');\nvar need_url_substring = 'yastatic.net/yandex-video-player-iframe-api-bundles/';\nvar timerId = setInterval(open_iframe, 1000);\nconsole.log(timerId);\n}",
-      "libs": [],
-      "options": {
-        "altCSS": false,
-        "altJS": false,
-        "autoImportant": false,
-        "on": true
-      }
-    },
-    {
-      "compiledCss": "@media screen and (device-width: 2560px) and (display-mode: fullscreen) {.Player {height: 135%!important; top: -190px!important; overflow-y: hidden!important;}div {overflow-y: hidden!important;} }",
-      "css": "/* kinopoisk online cinema - 3rd step */\n@media screen and (device-width: 2560px) and (display-mode: fullscreen) {\n\t.Player {\n\t\theight: 135%;\n    \ttop: -190px;\n    \toverflow-y: hidden;\n\t}\n\tdiv {\n\t\toverflow-y: hidden;\n\t}\n}",
-      "id": "yastatic.net",
-      "js": "",
-      "libs": [],
-      "options": {
-        "altCSS": false,
-        "altJS": false,
-        "autoImportant": true,
-        "on": true
-      }
-    },
-    {
       "compiledCss": "@media screen and (device-width: 2560px) and (display-mode: fullscreen) {video {height: 135%!important; position: relative!important; top: -190px!important; left: 0px!important;} }",
       "css": "@media screen and (device-width: 2560px) and (display-mode: fullscreen) {\n\tvideo {\n\t\theight: 135%;\n    \tposition: relative;\n    \ttop: -190px;\n    \tleft: 0px;\n\t}\n}",
       "id": "megafon.tv/movies/vods/",
@@ -129,6 +104,19 @@
         "altCSS": false,
         "altJS": false,
         "autoImportant": true,
+        "on": true
+      }
+    },
+    {
+      "compiledCss": "",
+      "css": "",
+      "id": "ott-widget.kinopoisk.ru/v1/kp/*",
+      "js": "// kinopoisk online cinema - 2nd step\nfunction open_iframe() {\n\tconsole.log('search iframes');\n\tlet iframes = document.getElementsByTagName('iframe');\n\tfor (var i = 0; i < iframes.length; i++) {\n\t\tlet url = iframes[i].src;\n\t\tconsole.log('find iframe with url ' + url);\n\t\tif (url.indexOf(need_url_substring) !== -1) {\n\t\t\tconsole.log('find needed domain ' + need_url_substring);\n\t\t\tlet win = window.open(url, '_top');\n\t\t\twin.blur();\n\t\t\tconsole.log('open win');\n\t\t\tif (!!win) {\n\t\t\t\tconsole.log('stop timer ' + timerId);\n\t\t\t\tclearInterval(timerId);\n\t\t\t}\n\t\t}\n\t}\n}\n\nif (window.matchMedia(\"screen and (device-width: 2560px) and (display-mode: fullscreen)\").matches) {\nconsole.log('loaded userscript');\nvar need_url_substring = 'yastatic.net/yandex-video-player-iframe-api-bundles/';\nvar timerId = setInterval(open_iframe, 1000);\nconsole.log(timerId);\n}",
+      "libs": [],
+      "options": {
+        "altCSS": false,
+        "altJS": false,
+        "autoImportant": false,
         "on": true
       }
     },
@@ -172,11 +160,25 @@
       }
     },
     {
+      "compiledCss": "@media screen and (device-width: 2560px) and (display-mode: fullscreen) {.Player {height: 135%!important; top: -190px!important; overflow-y: hidden!important;}div {overflow-y: hidden!important;} }",
+      "css": "/* kinopoisk online cinema - 3rd step */\n@media screen and (device-width: 2560px) and (display-mode: fullscreen) {\n\t.Player {\n\t\theight: 135%;\n    \ttop: -190px;\n    \toverflow-y: hidden;\n\t}\n\tdiv {\n\t\toverflow-y: hidden;\n\t}\n}",
+      "id": "yastatic.net",
+      "js": "",
+      "libs": [],
+      "options": {
+        "altCSS": false,
+        "altJS": false,
+        "autoImportant": true,
+        "on": true
+      }
+    },
+    {
       "compiledCss": ".user-speed-buttons {color: rgb(144, 144, 144)!important; background-color: rgb(40, 40, 40)!important; text-decoration: none!important; border: none!important; height: 20px!important; margin-left: 10px!important;}.user-speed-buttons:hover {color: rgb(40, 40, 40)!important; background-color: rgb(144, 144, 144)!important; text-decoration: none!important; border: none!important; height: 20px!important; margin-left: 10px!important;}",
       "css": ".user-speed-buttons {\n\tcolor: #909090;\n\tbackground-color: #282828;\n\ttext-decoration: none;\n\tborder: none;\n\theight: 20px;\n\tmargin-left: 10px;\n}\n.user-speed-buttons:hover {\n\tcolor: #282828;\n\tbackground-color: #909090;\n\ttext-decoration: none;\n\tborder: none;\n\theight: 20px;\n\tmargin-left: 10px;\n}",
       "id": "youtube.com/watch?*",
       "js": "function appendYoutubeSpeedButtons() {\n\tconsole.log('append buttons with other speed');\n\tlet yt_buttons = document.getElementById('info-text');\n\tfor (i = 0.5; i < 4.1; i += 0.5) {\n\t\tlet btn = document.createElement('button');\n\t\tbtn.setAttribute('onclick', 'document.getElementsByTagName(\"video\")[0].playbackRate = ' + i);\n\t\tbtn.textContent = i;\n\t\tbtn.className += 'user-speed-buttons';\n\t\tyt_buttons.append(btn);\n\t}\n\tconsole.log('speed buttons ready');\n}\nsetTimeout(appendYoutubeSpeedButtons, 1500);",
       "libs": [],
+      "name": "",
       "options": {
         "altCSS": false,
         "altJS": false,
