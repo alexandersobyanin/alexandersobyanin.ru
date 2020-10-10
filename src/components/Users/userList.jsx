@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import {Button} from "reactstrap";
 
 import {withFirebase} from '../Firebase';
 import * as ROUTES from '../../constants/routes';
@@ -46,25 +47,18 @@ class UserList extends Component {
                 <ul>
                     {users.map(user => (
                         <li key={user.uid}>
-              <span>
-                <strong>ID:</strong> {user.uid}
-              </span>
+                            <span>{user.username}</span>
+                            <span> </span>
+                            <span>(</span>
+                            <span><strong>{user.uid}</strong></span>
+                            <span>)</span>
+                            <span> </span>
                             <span>
-                <strong>E-Mail:</strong> {user.email}
-              </span>
-                            <span>
-                <strong>Username:</strong> {user.username}
-              </span>
-                            <span>
-                <Link
-                    to={{
-                        pathname: `${ROUTES.ADMIN}/${user.uid}`,
-                        state: {user},
-                    }}
-                >
-                  Details
-                </Link>
-              </span>
+                                <Link component={Button} to={{
+                                    pathname: `${ROUTES.ADMIN}/${user.uid}`,
+                                    state: {user},
+                                }}>Details</Link>
+                            </span>
                         </li>
                     ))}
                 </ul>

@@ -46,23 +46,23 @@ class UserItem extends Component {
             <div>
                 <h2>User ({this.props.match.params.id})</h2>
                 {loading && <div>Loading ...</div>}
-
                 {user && (
                     <div>
-            <span>
-              <strong>ID:</strong> {user.uid}
-            </span>
                         <span>
-              <strong>E-Mail:</strong> {user.email}
-            </span>
+                            <strong>ID:</strong> {user.uid}
+                        </span>
+                        <br/>
                         <span>
-              <strong>Username:</strong> {user.username}
-            </span>
+                            <strong>E-Mail:</strong> {user.email}
+                        </span>
+                        <br/>
                         <span>
-              <Button onClick={this.onSendPasswordResetEmail}>
-                  Send Password Reset
-              </Button>
-            </span>
+                            <strong>Username:</strong> {user.username}
+                        </span>
+                        <br/>
+                        <span>
+                            <Button onClick={this.onSendPasswordResetEmail}>Send Password Reset</Button>
+                        </span>
                     </div>
                 )}
             </div>
