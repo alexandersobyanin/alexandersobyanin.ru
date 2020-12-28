@@ -6,6 +6,7 @@ import {AuthUserContext, withAuthorization, withEmailVerification} from '../Sess
 import {withFirebase} from '../Firebase';
 import {PasswordForgetForm} from '../PasswordForget';
 import PasswordChangeForm from '../PasswordChange';
+import UserInfo from '../UserInfo';
 
 const SIGN_IN_METHODS = [
     {
@@ -33,6 +34,8 @@ const AccountPage = () => (
         {authUser => (
             <Fragment>
                 <h1>Account: {authUser.email}</h1>
+                <UserInfo authUser={authUser}/>
+                <div className="my-2"/>
                 <PasswordForgetForm/>
                 <div className="my-2"/>
                 <PasswordChangeForm/>
