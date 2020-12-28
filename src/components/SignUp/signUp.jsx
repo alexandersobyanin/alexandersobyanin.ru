@@ -15,6 +15,7 @@ const SignUpPage = () => (
 );
 
 const INITIAL_STATE = {
+    uid: '',
     username: '',
     email: '',
     passwordOne: '',
@@ -41,7 +42,7 @@ class SignUpFormBase extends Component {
     }
 
     onSubmit = event => {
-        const {username, email, passwordOne, isAdmin} = this.state;
+        const {uid, username, email, passwordOne, isAdmin} = this.state;
         const roles = {};
 
         // Отключил регистрацию администратором
@@ -54,6 +55,7 @@ class SignUpFormBase extends Component {
             .then(authUser => {
                 // Create a user in your Firebase realtime database
                 return this.props.firebase.user(authUser.user.uid).set({
+                    uid,
                     username,
                     email,
                     roles,
@@ -87,6 +89,7 @@ class SignUpFormBase extends Component {
 
     render() {
         const {
+            uid,
             username,
             email,
             passwordOne,
