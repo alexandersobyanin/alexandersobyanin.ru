@@ -47,6 +47,7 @@
       "id": "crm.carbonsoft.ru",
       "js": "function changeLineColor(text, color) {\n  let xpath = \"//td[contains(text(),'\" + text + \"')]\";\n  let elements = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);\n  let element = elements.iterateNext();\n  while (element) {\n    element.parentNode.style.backgroundColor = color;\n    element = elements.iterateNext();\n  }\n}\nswitch (window.location.pathname) {\n  case '/vcrm/index.php':\n  \t// Чтобы работали подсказки паролей в особом месте\n    jQuery('td.showPanelBg div.small table [name=decrypt-password]').attr(\"id\",\"decrypt-password\").attr('autocomplete', true).attr('type', 'password');\n    if (window.location.search.search('record') > 0 && window.location.search.search('module=HelpDesk') > 0) {\n    \t// Это страница заявки\n    \tticket_title = document.getElementById('dtlview_Название').textContent;\n    \t// Чтобы был нормальный текст на вкладке\n    \tdocument.title = ticket_title;\n    }\n    break;\n  case '/vcrm/carbon/git_commits_report.html':\n  \t// me\n    changeLineColor('sobyanin@', '#ebffeb');\n    // billing5\n    changeLineColor('naumov@', '#fbebeb');\n    changeLineColor('r.us@', '#fbebeb');\n    changeLineColor('rus@', '#fbebeb');\n    // acrm\n    changeLineColor('klinskih@', '#ebebeb');\n    changeLineColor('obukhov@', '#ebebeb');\n    break;\n}",
       "libs": [],
+      "name": "",
       "options": {
         "altCSS": false,
         "altJS": false,
@@ -173,10 +174,24 @@
       }
     },
     {
+      "compiledCss": "ytd-add-to-playlist-renderer[dialog] #playlists#playlists#playlists.ytd-add-to-playlist-renderer {max-height: 600px!important;}",
+      "css": "ytd-add-to-playlist-renderer[dialog] #playlists#playlists#playlists.ytd-add-to-playlist-renderer {\n\tmax-height: 600px;\n}",
+      "id": "youtube.com",
+      "js": "",
+      "libs": [],
+      "name": "",
+      "options": {
+        "altCSS": false,
+        "altJS": false,
+        "autoImportant": false,
+        "on": true
+      }
+    },
+    {
       "compiledCss": ".user-speed-buttons {color: rgb(144, 144, 144)!important; background-color: rgb(40, 40, 40)!important; text-decoration: none!important; border: none!important; height: 20px!important; margin-left: 10px!important;}.user-speed-buttons:hover {color: rgb(40, 40, 40)!important; background-color: rgb(144, 144, 144)!important; text-decoration: none!important; border: none!important; height: 20px!important; margin-left: 10px!important;}",
       "css": ".user-speed-buttons {\n\tcolor: #909090;\n\tbackground-color: #282828;\n\ttext-decoration: none;\n\tborder: none;\n\theight: 20px;\n\tmargin-left: 10px;\n}\n.user-speed-buttons:hover {\n\tcolor: #282828;\n\tbackground-color: #909090;\n\ttext-decoration: none;\n\tborder: none;\n\theight: 20px;\n\tmargin-left: 10px;\n}",
       "id": "youtube.com/watch?*",
-      "js": "function appendYoutubeSpeedButtons() {\n\tconsole.log('append buttons with other speed after YT logo in header');\n\tlet yt_buttons = document.getElementById('info-text');\n\tlet yt_logo = document.getElementById('start');\n\tfor (i = 0.5; i < 4.1; i += 0.5) {\n\t\tlet btn = document.createElement('button');\n\t\tbtn.setAttribute('onclick', 'document.getElementsByTagName(\"video\")[0].playbackRate = ' + i);\n\t\tbtn.textContent = i;\n\t\tbtn.className += 'user-speed-buttons';\n\t\tyt_buttons.append(btn);\n\t\tyt_logo.append(btn.cloneNode(true));\n\t}\n\tconsole.log('speed buttons ready');\n}\nsetTimeout(appendYoutubeSpeedButtons, 1500);",
+      "js": "function appendYoutubeSpeedButtons() {\n\tconsole.log('append buttons with other speed after YT logo in header');\n\tlet yt_buttons = document.getElementById('info-text');\n\tlet yt_logo = document.getElementById('start');\n\tfor (i = 0.5; i < 4.1; i += 0.5) {\n\t\tlet btn = document.createElement('button');\n\t\tbtn.setAttribute('onclick', 'document.getElementsByTagName(\"video\")[0].playbackRate = ' + i);\n\t\tbtn.textContent = i;\n\t\tbtn.className += 'user-speed-buttons';\n\t\tyt_buttons.append(btn);\n\t\tyt_logo.append(btn.cloneNode(true));\n\t}\n\tconsole.log('speed buttons ready');\n}\nfunction toggleYoutubeUltraWide() {\n\tlet style = document.getElementById('custom-styles');\n    if (!style) {\n      style = document.createElement('style');\n      style.id = \"custom-styles\";\n      document.head.appendChild(style);\n    }\n    if (!isUltraWideEnabled) {\n    \tstyle.innerHTML = \"@media screen and (display-mode: fullscreen) { body { zoom: 134%; } div#content.ytd-app { margin-top: -170px; margin-left: -434px; } }\";\n    \tisUltraWideEnabled = true;\n    \tconsole.log('UltraWide enabled');\n    } else {\n    \tstyle.innerHTML = \"\";\n    \tisUltraWideEnabled = false;\n    \tconsole.log('UltraWide disabled');\n    }\n}\nfunction appendYoutubeUltraWideButton() {\n\tconsole.log('append button for UltraWide display');\n\tlet yt_buttons = document.getElementById('info-text');\n\tlet yt_logo = document.getElementById('start');\n\tlet btn = document.createElement('button');\n\tbtn.className += 'user-speed-buttons';\n\tbtn.addEventListener('click', toggleYoutubeUltraWide, false);\n\tbtn.textContent = 'UWQHD';\n\tyt_buttons.append(btn);\n\tyt_logo.append(btn.cloneNode(true));\n\tconsole.log('UltraWide button ready');\n}\nvar isUltraWideEnabled = false;\nsetTimeout(appendYoutubeSpeedButtons, 1500);\nsetTimeout(appendYoutubeUltraWideButton, 1500);\nconsole.log('YouTube custom css initialized');",
       "libs": [],
       "name": "",
       "options": {
