@@ -89,7 +89,6 @@ class SignUpFormBase extends Component {
 
     render() {
         const {
-            uid,
             username,
             email,
             passwordOne,
