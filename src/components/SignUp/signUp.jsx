@@ -112,6 +112,7 @@ class SignUpFormBase extends Component {
                         onChange={this.onChange}
                         type="text"
                         placeholder="Full Name"
+                        autocomplete="name"
                     />
                     <Input
                         name="email"
@@ -119,6 +120,7 @@ class SignUpFormBase extends Component {
                         onChange={this.onChange}
                         type="email"
                         placeholder="Email Address"
+                        autocomplete="email"
                     />
                     <Input
                         name="passwordOne"
@@ -133,6 +135,7 @@ class SignUpFormBase extends Component {
                         onChange={this.onChange}
                         type="password"
                         placeholder="Confirm Password"
+                        placeholder="Password"
                     />
                 </FormGroup>
                 <FormGroup>

@@ -52,7 +52,7 @@ class PasswordForgetFormBase extends Component {
             <Form onSubmit={this.onSubmit} inline>
                 <FormGroup>
                     <Input name="email" value={this.state.email} onChange={this.onChange}
-                           type="email" placeholder="Email Address" className="mr-2"/>
+                           type="email" placeholder="Email Address" className="mr-2" autocomplete="email" />
                 </FormGroup>
                 <Button disabled={isInvalid} type="submit">
                     Reset My Password
