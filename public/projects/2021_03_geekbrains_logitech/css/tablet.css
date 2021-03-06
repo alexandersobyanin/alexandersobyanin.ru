@@ -1,0 +1,377 @@
+@media (min-width: 768px) {
+    .heading {
+        font-size: 40px;
+        line-height: 47px;
+    }
+
+    .text {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .top {
+        padding-top: 160px;
+        padding-bottom: 80px;
+    }
+
+    .top__img {
+        height: 514px;
+        background: url(../image/top_MX-Master_tablet.png) no-repeat center;
+    }
+
+    .top__text {
+        margin-top: 124px;
+        margin-left: 154px;
+        margin-right: 155px;
+    }
+
+    .top__arrow {
+        margin-top: 76px;
+    }
+
+    .top__arrow img {
+        width: 57px;
+        height: 29px;
+    }
+
+    .bluetooth {
+        padding-top: 80px;
+        padding-bottom: 18px;
+    }
+
+    .bluetooth__icon {
+        margin-bottom: 40px;
+    }
+
+    .bluetooth__icon_img {
+        width: 22px;
+        height: 40px;
+    }
+
+    .bluetooth_heading-wires {
+        margin-bottom: 30px;
+    }
+
+    .bluetooth_text-wires {
+        margin-left: 77px;
+        margin-right: 77px;
+        margin-bottom: 76px;
+    }
+
+    .bluetooth_heading-days {
+        font-size: 150px;
+        line-height: 176px;
+    }
+
+    .bluetooth__img {
+        margin-top: -80px;
+        height: 498px;
+        background: url(../image/bluetooth_High_Resolution_PNG-MX_Master_3_LEFT_GRAPHITE_1_tablet.png) no-repeat center bottom;
+    }
+
+    .info {
+        padding-top: 70px;
+        padding-bottom: 61px;
+    }
+
+    .info__table-text {
+        margin-top: 30px;
+        margin-left: 77px;
+        margin-right: 77px;
+    }
+
+    .info__content {
+        margin-top: 50px;
+        gap: 30px;
+    }
+
+    .info__item {
+        min-height: 170px;
+        flex-basis: 300px;
+    }
+
+    .info__item-text {
+        margin-left: 31px;
+        margin-right: 31px;
+    }
+
+    #info__carousel {
+        margin-top: 50px;
+    }
+
+    .info__carousel-heading {
+        margin-top: 50px;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .info__carousel-buttons {
+        margin-bottom: -140px;
+    }
+
+    #info__carousel .info__carousel-buttons button {
+        width: 40px;
+        height: 40px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .info__carousel-item-img-mob {
+        display: none !important;
+    }
+
+    .info__carousel-item-img-tablet {
+        display: block !important;
+    }
+
+    .info__carousel-buttons-arrow {
+        margin-bottom: -800px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-prev {
+        padding-left: 34px;
+        margin-left: 100px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-next {
+        padding-right: 33px;
+        margin-right: 100px;
+    }
+
+    .info__carousel-buttons-arrow .carousel-control-prev-icon,
+    .info__carousel-buttons-arrow .carousel-control-next-icon {
+        width: 12px;
+    }
+
+    .info__carousel-buttons-mock {
+        margin-top: 23px;
+        height: 40px;
+    }
+
+    .info__carousel-text {
+        margin-top: 22px;
+        margin-left: 77px;
+        margin-right: 77px;
+    }
+
+    .flow {
+        padding-bottom: 498px;
+        background-image: url(../image/flow_High_Resolution_JPG-MX_Lifestyle_2346_1_tablet.png);
+    }
+
+    .flow_heading {
+        margin-left: 129px;
+        margin-right: 129px;
+    }
+
+    .flow_text {
+        margin-top: 30px;
+        margin-left: 64px;
+        margin-right: 65px;
+    }
+
+    .flow__ol {
+        margin-top: 70px;
+        margin-left: 67px;
+        margin-right: 68px;
+        display: flex;
+        list-style-position: inside;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .flow__ol-text {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-left: 1px solid #494949;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: left;
+    }
+
+    .flow__ol-text:first-child {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .flow__ol-text:last-child {
+        padding-right: 0;
+    }
+
+    .settings {
+        padding-bottom: 70px;
+    }
+
+    .settings_heading {
+        margin-left: 215px;
+        margin-right: 215px;
+    }
+
+    .settings_text {
+        margin-top: 30px;
+        margin-left: 64px;
+        margin-right: 65px;
+    }
+
+    #settings__carousel {
+        margin-top: 54px;
+        margin-left: 199px;
+        margin-right: 198px;
+    }
+
+    .settings__carousel-buttons {
+        margin-bottom: -88px;
+    }
+
+    #settings__carousel .settings__carousel-buttons button {
+        width: 25px;
+        height: 25px;
+        margin-left: 25px;
+        background-image: url(../image/settings_slider_button_Ellipse_tablet.svg);
+    }
+
+    #settings__carousel .settings__carousel-buttons button.active {
+        background-image: url(../image/settings_slider_button_Ellipse_tablet_dark.svg);
+    }
+
+    #settings__carousel .settings__carousel-buttons button.active {
+        background-image: url(../image/settings_slider_button_Ellipse_tablet_dark.svg);
+    }
+
+    .settings__carousel-img-mob {
+        display: none !important;
+    }
+
+    .settings__carousel-img-tablet {
+        display: block !important;
+    }
+
+    .settings__carousel-buttons-mock {
+        margin-top: 53px;
+        height: 25px;
+    }
+
+    .setting__software__content {
+        width: 765px;
+        margin-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 38px;
+    }
+
+    .setting__software__icons {
+        margin-bottom: 25px;
+        padding-left: calc(127px - 29px);
+        padding-right: calc(126px - 22px);
+    }
+
+    .settings__img {
+        height: 35px;
+    }
+
+    .setting__software-text {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .mouse_container {
+        padding-left: 67px;
+        padding-right: 65px;
+    }
+
+    .mouse_text {
+        margin-top: 30px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .mouse__img {
+        margin-top: 50px;
+        height: 549px;
+    }
+
+    .mouse__img1 {
+        background-image: url(../image/mouse_tablet_High_Resolution_JPG-MX_Master_Lifestyle_2602_SpaceGrey_for_MAC_2.png);
+    }
+
+    .mouse__img2 {
+        background-image: url(../image/mouse_tablet_image_2.png);
+    }
+
+    .copyright {
+        padding-top: 47px;
+        padding-bottom: 71px;
+    }
+
+    .copyright_text {
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media (min-width:768px) and (max-width: 800px) {
+    .info__carousel-buttons {
+        margin-bottom: -145px;
+    }
+
+    .info__carousel-buttons-arrow {
+        margin-bottom: -725px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-prev {
+        margin-left: 60px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-next {
+        margin-right: 60px;
+    }
+
+    .settings {
+        padding-bottom: 0;
+    }
+
+    #settings__carousel .settings__carousel-buttons button {
+        margin-left: 15px;
+    }
+
+    .mouse__img {
+        margin-top: -10px;
+        background-position: bottom;
+    }
+}
+
+@media (min-width:800px) and (max-width: 1150px) {
+    .info__carousel-buttons {
+        margin-bottom: -150px;
+    }
+}
+
+@media (min-width:800px) and (max-width: 1000px) {
+    .info__carousel-buttons-arrow {
+        margin-bottom: -940px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-prev {
+        margin-left: 170px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-next {
+        margin-right: 170px;
+    }
+}
+
+@media (min-width:1000px) and (max-width: 1024px) {
+    .info__carousel-buttons-arrow {
+        margin-bottom: -895px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-prev {
+        margin-left: 145px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-next {
+        margin-right: 145px;
+    }
+}

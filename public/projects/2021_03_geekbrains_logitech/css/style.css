@@ -1,0 +1,394 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #e0e1e2;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+}
+
+.center_67_61 {
+    margin-left: 67px;
+    margin-right: 61px;
+}
+
+.center_59_59 {
+    margin-left: 59px;
+    margin-right: 59px;
+}
+
+.center_34_33 {
+    margin-left: 34px;
+    margin-right: 33px;
+}
+
+.heading {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #2f3132;
+}
+
+.text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 16px;
+    text-align: center;
+    color: #2f3132;
+}
+
+.top {
+    background: #e0e1e2;
+    padding-top: 94px;
+    padding-bottom: 48px;
+}
+
+.top__img {
+    height: 230px;
+    background: url(../image/top_MX-Master_mob.png) no-repeat center;
+    background-size: contain;
+}
+
+.top__text {
+    margin-top: 67px;
+}
+
+.top__arrow {
+    margin-top: 40px;
+}
+
+.bluetooth {
+    background: #ededed;
+    padding-top: 42px;
+    padding-bottom: 18px;
+}
+
+.bluetooth__icon {
+    margin-bottom: 27px;
+}
+
+.bluetooth__icon_img {
+    width: 18px;
+    height: 34px;
+}
+
+.bluetooth_heading-wires {
+    margin-bottom: 20px;
+}
+
+.bluetooth_text-wires {
+    margin-bottom: 31px;
+}
+
+.bluetooth_heading-days {
+    margin-bottom: 0;
+    font-size: 60px;
+    line-height: 70px;
+    color: #c4c4c4;
+}
+
+.bluetooth__img {
+    margin-top: -10px;
+    height: 218px;
+    background: url(../image/bluetooth_High_Resolution_PNG-MX_Master_3_LEFT_GRAPHITE_1_mob.png) no-repeat center bottom;
+    background-size: contain;
+}
+
+.bluetooth_heading-days-desktop {
+    display: none;
+}
+
+.info {
+    padding-top: 70px;
+    padding-bottom: 63px;
+    background: #ffffff;
+}
+
+.info__table-heading {
+    margin-bottom: 0;
+}
+
+.info__table-text {
+    margin-top: 20px;
+}
+
+.info__content {
+    margin-left: 19px;
+    margin-right: 19px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.info__item {
+    border: 1px solid #2f3132;
+    min-height: 94px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 166px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info__item-heading {
+    margin-bottom: 5px;
+}
+
+.info__item-text {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#info__carousel {
+    margin-top: 28px;
+}
+
+.info__carousel-buttons {
+    margin-bottom: -95px;
+}
+
+#info__carousel .info__carousel-buttons button {
+    border-radius: 50%;
+    width: 31px;
+    height: 10px;
+    margin-left: 11px;
+    margin-right: 11px;
+}
+
+#info__carousel .info__carousel-buttons button:nth-child(1) {
+    background: transparent url(../image/info_slider_button_wood-texture.png) no-repeat center;
+}
+
+#info__carousel .info__carousel-buttons button:nth-child(2) {
+    background: transparent url(../image/info_slider_button_glass-texture.png) no-repeat center;
+}
+
+#info__carousel .info__carousel-buttons button:nth-child(3) {
+    background: transparent url(../image/info_slider_button_linoleum-texture.png) no-repeat center;
+}
+
+#info__carousel .info__carousel-buttons button:nth-child(4) {
+    background: transparent url(../image/info_slider_button_cloth-texture.png) no-repeat center;
+}
+
+#info__carousel .info__carousel-buttons button:nth-child(5) {
+    background: transparent url(../image/info_slider_button_marble-texture.png) no-repeat center;
+}
+
+.info__carousel-item-img-tablet {
+    display: none !important;
+}
+
+.info__carousel-item-img-desk {
+    display: none !important;
+}
+
+.info__carousel-buttons-arrow {
+    opacity: 1;
+    margin-bottom: -400px;
+}
+
+.info__carousel-buttons-arrow.carousel-control-prev {
+    padding-left: 34px;
+}
+
+.info__carousel-buttons-arrow.carousel-control-next {
+    padding-right: 33px;
+}
+
+.info__carousel-buttons-arrow .carousel-control-prev-icon {
+    width: 10px;
+    background-image: url(../image/info_slider_arrow-left.svg);
+}
+
+.info__carousel-buttons-arrow .carousel-control-next-icon {
+    width: 10px;
+    background-image: url(../image/info_slider_arrow-right.svg);
+}
+
+.info__carousel-heading {
+    margin-top: 28px;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: inherit;
+    color: #2f3132;
+}
+
+.info__carousel-buttons-mock {
+    margin-top: 20px;
+    height: 31px;
+}
+
+.info__carousel-text {
+    margin-top: 20px;
+}
+
+.flow {
+    padding-top: 70px;
+    padding-bottom: 218px;
+    background: #ededed url(../image/flow_High_Resolution_JPG-MX_Lifestyle_2346_1_mob.png) no-repeat bottom;
+}
+
+.flow_heading {
+    margin-bottom: 0;
+}
+
+.flow_text {
+    margin-top: 20px;
+}
+
+.flow__ol {
+    margin-top: 36px;
+    margin-left: 34px;
+    margin-right: 105px;
+}
+
+.flow__ol-text {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.settings {
+    padding-top: 70px;
+    background-color: #ededed;
+}
+
+.settings_heading {
+    margin-bottom: 0;
+}
+
+.settings_text {
+    margin-top: 20px;
+}
+
+#settings__carousel {
+    margin-top: 35px;
+    margin-left: 23px;
+    margin-right: 22px;
+}
+
+.settings__carousel-buttons {
+    margin-bottom: -45px;
+}
+
+#settings__carousel .settings__carousel-buttons button {
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    margin-right: 0;
+    opacity: 1;
+    background: transparent url(../image/settings_slider_button_Ellipse.svg) no-repeat center;
+}
+
+#settings__carousel .settings__carousel-buttons button.active {
+    background-image: url(../image/settings_slider_button_Ellipse_dark.svg);
+}
+
+.settings__carousel-img-tablet {
+    display: none !important;
+}
+
+.settings__carousel-buttons-arrow {
+    opacity: 0;
+}
+
+.settings__carousel-buttons-mock {
+    margin-top: 20px;
+    height: 15px;
+}
+
+#settings__carousel_desktop {
+    display: none;
+}
+
+.setting__software__content {
+    margin-top: 60px;
+    padding-top: 23px;
+    padding-right: 22px;
+    padding-left: 29px;
+    padding-bottom: 26px;
+    background: #c4c4c4;
+}
+
+.setting__software__icons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.setting__software-text {
+    color: #ffffff;
+    margin-left: 5px;
+    margin-right: 11px;
+}
+
+.mouse {
+    background: #ffffff;
+}
+
+.mouse_container {
+    padding-top: 70px;
+}
+
+.mouse_text {
+    margin-top: 20px;
+}
+
+.mouse__img {
+    margin-top: 20px;
+    height: 310px;
+}
+
+.mouse__img1 {
+    background: url(../image/mouse_mob_image_1.png) no-repeat bottom;
+    background-size: contain;
+}
+
+.mouse__img2 {
+    background: url(../image/mouse_mob_image_2.png) no-repeat bottom;
+    background-size: contain;
+}
+
+.copyright {
+    background: #2f3132;
+    padding-top: 22px;
+    padding-bottom: 37px;
+}
+
+.copyright_text {
+    font-size: 7px;
+    line-height: 8px;
+    color: #c7c8c8;
+}
+
+@media (max-width: 370px) {
+    .bluetooth__img {
+        margin-top: -30px;
+    }
+
+    .mouse__img {
+        margin-top: -20px;
+    }
+}
+
+@media (max-width: 370px) {
+    .info__carousel-buttons {
+        margin-bottom: -90px;
+    }
+
+    #info__carousel .info__carousel-buttons button {
+        height: 3px;
+    }
+
+    .info__carousel-buttons-arrow {
+        margin-bottom: -365px;
+    }
+}

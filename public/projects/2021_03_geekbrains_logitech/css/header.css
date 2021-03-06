@@ -1,0 +1,203 @@
+.header {
+    padding-top: 25px;
+    background: #e0e1e2;
+}
+
+.header__logo_white {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .header__logo_dark {
+        display: none;
+    }
+    .header__logo_white {
+        display: inherit;
+    }
+}
+
+.header__wrapper {
+    max-width: 1160px;
+    margin: auto;
+    padding: 0;
+}
+
+.header__navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.header__container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.header__logo_link {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.header__collapse_logo_img {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .header__logo_link {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header__toggler {
+        padding: 0;
+        margin: 0;
+        width: 30px;
+        position: absolute;
+        top: 0;
+        right: 29px;
+        z-index: 10;
+    }
+
+    .header__toggler, .header__toggler:focus {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .header__toggler .header__toggler_icon {
+        background-image: url(../image/header_menu-burger.svg);
+    }
+
+    .header__toggler[aria-expanded=true] .header__toggler_icon {
+        background-image: url(../image/header_Vector_8.svg);
+    }
+
+    .header__collapse {
+        justify-content: flex-end;
+        background-color: #2F3132;
+        width: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -25px;
+        padding: 25px;
+    }
+
+    .header__collapse_logo_img {
+        display: inherit;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header__nav_list {
+        align-items: center;
+        margin-top: calc(148px - 32px);
+        margin-bottom: 208px;
+    }
+
+    .header__desk {
+        display: none;
+    }
+
+    .header__nav_list .nav-item {
+        margin-top: 32px;
+    }
+
+    .header__nav_list.navbar-nav .nav-link {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        color: #C4C4C4;
+    }
+
+    .header__nav_list.navbar-nav .nav-item.header__mob .nav-link.active {
+        color: #ffffff;
+        border-bottom: 2px solid #ffffff;
+    }
+}
+
+@media (min-width:768px) and (max-width: 992px) {
+    .header {
+        padding-top: 54px;
+    }
+
+    .header__toggler {
+        right: 58px;
+    }
+
+    .header__collapse {
+        top: -54px;
+        padding: 54px;
+    }
+
+    .header__nav_list {
+        margin-top: calc(123px - 59px);
+        margin-bottom: calc(141px - 54px);
+    }
+
+    .header__nav_list .nav-item {
+        margin-top: 59px;
+    }
+
+    .header__nav_list.navbar-nav .nav-link {
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    .header__nav_list.navbar-nav .nav-item.header__mob .nav-link.active {
+        border-bottom: 4px solid #ffffff;
+    }
+}
+
+@media (min-width: 992px) {
+    .header {
+        padding-top: 28px;
+        padding-bottom: 28px;
+        padding-left: 61px;
+        padding-right: 62px;
+        background: #2F3132;
+    }
+
+    .header__collapse {
+        margin-right: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .header__mob {
+        display: none;
+    }
+
+    .header__nav_list .nav-item {
+        padding-left: 21px;
+        padding-right: 21px;
+        border-right: 1px solid #494949;
+    }
+
+    .header__nav_list .nav-item.header__desk:first-child {
+        padding-left: 0;
+    }
+
+    .header__nav_list .nav-item.header__desk:last-child {
+        padding-right: 0;
+        border: none;
+    }
+
+    .header__nav_list.navbar-nav .nav-item.header__desk .nav-link {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        color: #ffffff;
+        text-transform: uppercase;
+        padding: 0;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .header__nav_list.navbar-nav .nav-item.header__desk .nav-link.active {
+        color: #ffffff;
+        border-bottom: 1px solid #ffffff;
+    }
+}

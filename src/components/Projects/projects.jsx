@@ -33,6 +33,10 @@ class Projects extends Component {
                     <Col>
                         Game <a href="/projects/hr_task_text_puzzle.html" target="_blank" rel="noopener noreferrer">Text Puzzle</a> from some HR's task (JavaScript)
                     </Col>
+                    <Col>
+                        Game <a href="/projects/2021_03_geekbrains_logitech/index.html" target="_blank" rel="noopener noreferrer">Logitech Landing</a>
+                        from <a href="https://geekbrains.ru/courses/2575" target="_blank" title="GeekBrains курс Стартуй в веб-разработке">GeekBrains</a> (HTML/CSS with Figma)
+                    </Col>
                 </Row>
             </Fragment>
         )
