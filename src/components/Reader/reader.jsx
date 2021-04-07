@@ -11,7 +11,7 @@ class Reader extends Component {
                 <h1>Reader</h1>
                 <Row>
                     <Col>
-                        <a href="https://www.meistertask.com/app/project/bGD7VdLD/basic">MeisterTask</a>
+                        <a href="https://www.notion.so/b1oki/c41ab00c62e44e1d8ae851bdfb83b06b?v=f2982d3ae7bb44b1888f9c396364e30c">Notion Tasks</a>
                     </Col>
                     <Col>
                         <a href="https://www.notion.so/b1oki/">Notion</a>
