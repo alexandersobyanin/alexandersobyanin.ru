@@ -1,0 +1,332 @@
+@media (min-width: 1024px) {
+    .center-desktop {
+        padding-left: calc(50% - 1160px / 2);
+        padding-right: calc(50% - 1160px / 2);
+    }
+
+    .heading {
+        font-size: 36px;
+        line-height: 42px;
+        margin-bottom: 35px;
+    }
+
+    .text {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .text_center_desktop {
+        max-width: 765px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top {
+        padding-top: 100px;
+    }
+
+    .top__img {
+        height: 671px;
+        background: url(../image/top_MX-Master_desk.png) no-repeat center;
+    }
+
+    .top__text {
+        margin-top: 8px;
+    }
+
+    .top__arrow {
+        margin-top: 49px;
+    }
+
+    .bluetooth {
+        padding-bottom: 69px;
+    }
+
+    .bluetooth__icon {
+        margin-bottom: 35px;
+    }
+
+    .bluetooth_text-wires {
+        margin-bottom: 14px;
+    }
+
+    .bluetooth_heading-days {
+        display: none;
+    }
+
+    .bluetooth__center {
+        padding-left: calc(50% - 1244px / 2);
+        padding-right: calc(50% - 1244px / 2);
+    }
+
+    .bluetooth__img {
+        margin-top: 14px;
+        min-width: 1245px;
+        margin-left: calc((1160px - 1244px) / 2);
+        margin-right: calc((1160px - 1244px) / 2);
+        height: 427px;
+        background: url(../image/bluetooth_desktop_left_High_Resolution_PNG-MX_Master_3_FRONT_GRAPHITE_1.png) no-repeat 0 119px,
+        url(../image/bluetooth_desktop_right_High_Resolution_PNG-MX_Master_3_LEFT_GRAPHITE_1.png) no-repeat right 119px;
+    }
+
+    .bluetooth_heading-days-desktop {
+        font-size: 96px;
+        line-height: 113px;
+        display: flex;
+        justify-content: center;
+        padding-left: 90px;
+        margin-bottom: 0;
+    }
+
+    .bluetooth_heading-days-number {
+        font-size: 300px;
+        line-height: 352px;
+    }
+
+    .bluetooth_heading-days-word {
+        padding-top: 45px;
+    }
+
+    .info {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .info__item {
+        min-height: 140px;
+        flex-basis: 237px;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .info__item-heading {
+        margin-bottom: inherit;
+    }
+
+    .info__item-text {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #info__slider {
+        margin-left: calc((1160px - 1280px) / 2);
+        margin-right: calc((1160px - 1280px) / 2);
+    }
+
+    #info__carousel .info__carousel-buttons button {
+        width: 40px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #info__carousel .info__carousel-buttons button:nth-child(1) {
+        background-image: url(../image/info_slider_button_desk_wood-texture.png);
+    }
+
+    #info__carousel .info__carousel-buttons button:nth-child(2) {
+        background-image: url(../image/info_slider_button_desk_glass-texture.png);
+    }
+
+    #info__carousel .info__carousel-buttons button:nth-child(3) {
+        background-image: url(../image/info_slider_button_desk_linoleum-texture.png);
+    }
+
+    #info__carousel .info__carousel-buttons button:nth-child(4) {
+        background-image: url(../image/info_slider_button_desk_cloth-texture.png);
+    }
+
+    #info__carousel .info__carousel-buttons button:nth-child(5) {
+        background-image: url(../image/info_slider_button_desk_marble-texture.png);
+    }
+
+    .info__carousel-buttons-arrow .carousel-control-prev-icon {
+        width: 12px;
+        height: 24px;
+        background-image: url(../image/info_slider_desk_arrow-left.svg);
+    }
+
+    .info__carousel-buttons-arrow .carousel-control-next-icon {
+        width: 12px;
+        height: 24px;
+        background-image: url(../image/info_slider_desk_arrow-right.svg);
+    }
+
+    .info__carousel-item-img-tablet {
+        display: none !important;
+    }
+
+    .info__carousel-item-img-desk {
+        display: block !important;
+    }
+
+    .info__carousel-heading {
+        margin-top: 39px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .info__carousel-buttons-mock {
+        margin-top: 15px;
+    }
+
+    .info__carousel-text {
+        margin-top: 35px;
+    }
+
+    .flow {
+        padding-top: 100px;
+        padding-bottom: 870px;
+        background-image: url(../image/flow_High_Resolution_JPG-MX_Lifestyle_2346_1_desktop.png);
+        padding-left: calc(50% - 958px / 2);
+        padding-right: calc(50% - 958px / 2);
+    }
+
+    .flow_text,
+    .flow__ol {
+        max-width: unset;
+        margin-left: 15px;
+    }
+
+    .flow__ol-text {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .settings {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .settings_text {
+        margin-top: 38px;
+        max-width: 958px;
+    }
+
+    #settings__carousel,
+    .settings__carousel-buttons-mock{
+        display: none;
+    }
+
+    #settings__carousel_desktop {
+        margin-top: 72px;
+        display: block;
+    }
+
+    .setting__software__content {
+        margin-top: 0;
+        width: 749px;
+    }
+
+    .mouse {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        padding-left: calc(50% - 1310px / 2);
+        padding-right: calc(50% - 1310px / 2);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .mouse__item {
+        margin: 0;
+        height: 557px;
+        width: 50%;
+    }
+
+    .mouse_container {
+        padding-top: 121px;
+        padding-bottom: 121px;
+    }
+
+    .mouse_container_1 {
+        order: 1;
+        padding-left: 37px;
+        padding-right: calc(254px - 37px);;
+    }
+
+    .mouse_container_1 .mouse_heading,
+    .mouse_container_1 .mouse_text {
+        text-align: left;
+    }
+
+    .mouse_container_2 {
+        order: 2;
+        padding-left: calc(254px - 37px);
+        padding-right: 31px;
+    }
+
+    .mouse_container_2 .mouse_heading,
+    .mouse_container_2 .mouse_text {
+        text-align: right;
+    }
+
+    .mouse_heading {
+        margin-bottom: 0;
+    }
+
+    .mouse_text {
+        margin-top: 28px;
+    }
+
+    .mouse__img1 {
+        order: 0;
+        background-image: url(../image/mouse_desktop_High_Resolution_JPG-MX_Master_Lifestyle_2602_SpaceGrey_for_MAC_2.png);
+    }
+
+    .mouse__img2 {
+        order: 3;
+        background-image: url(../image/mouse_desktop_image_2.png);
+    }
+
+    .copyright {
+        height: 150px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .info__carousel-buttons-arrow {
+        margin-bottom: -700px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-prev {
+        margin-left: 210px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-next {
+        margin-right: 210px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1172px) {
+    #settings__carousel_desktop {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bluetooth {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .bluetooth__img {
+        margin-left: calc((100% - 1171px) / 2 - 10px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .info__carousel-buttons {
+        margin-bottom: -150px;
+    }
+
+    .info__carousel-buttons-arrow {
+        margin-bottom: -755px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-prev {
+        margin-left: 280px;
+    }
+
+    .info__carousel-buttons-arrow.carousel-control-next {
+        margin-right: 280px;
+    }
+}

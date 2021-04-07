@@ -1,0 +1,5 @@
+User-agent: *
+Host: https://alexandersobyanin.ru
+Sitemap: https://alexandersobyanin.ru/sitemap.xml
+Allow: /projects$
+Disallow: /lists$
