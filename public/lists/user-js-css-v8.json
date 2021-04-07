@@ -70,6 +70,34 @@
       }
     },
     {
+      "compiledCss": "ytd-add-to-playlist-renderer[dialog] #playlists#playlists#playlists.ytd-add-to-playlist-renderer {max-height: 600px!important;}",
+      "css": "ytd-add-to-playlist-renderer[dialog] #playlists#playlists#playlists.ytd-add-to-playlist-renderer {\n\tmax-height: 600px;\n}",
+      "id": "youtube.com",
+      "js": "",
+      "libs": [],
+      "name": "",
+      "options": {
+        "altCSS": false,
+        "altJS": false,
+        "autoImportant": false,
+        "on": true
+      }
+    },
+    {
+      "compiledCss": ".user-speed-buttons {color: rgb(144, 144, 144)!important; background-color: rgb(40, 40, 40)!important; text-decoration: none!important; border: none!important; height: 20px!important; margin-left: 10px!important;}.user-speed-buttons:hover {color: rgb(40, 40, 40)!important; background-color: rgb(144, 144, 144)!important; text-decoration: none!important; border: none!important; height: 20px!important; margin-left: 10px!important;}",
+      "css": ".user-speed-buttons {\n\tcolor: #909090;\n\tbackground-color: #282828;\n\ttext-decoration: none;\n\tborder: none;\n\theight: 20px;\n\tmargin-left: 10px;\n}\n.user-speed-buttons:hover {\n\tcolor: #282828;\n\tbackground-color: #909090;\n\ttext-decoration: none;\n\tborder: none;\n\theight: 20px;\n\tmargin-left: 10px;\n}",
+      "id": "youtube.com/watch?*",
+      "js": "function appendYoutubeSpeedButtons() {\n\tconsole.log('append buttons with other speed after YT logo in header');\n\tlet yt_buttons = document.getElementById('info-text');\n\tlet yt_logo = document.getElementById('start');\n\tfor (i = 0.5; i < 4.1; i += 0.5) {\n\t\tlet btn = document.createElement('button');\n\t\tbtn.setAttribute('onclick', 'document.getElementsByTagName(\"video\")[0].playbackRate = ' + i);\n\t\tbtn.textContent = i;\n\t\tbtn.className += 'user-speed-buttons';\n\t\tyt_buttons.append(btn);\n\t\tyt_logo.append(btn.cloneNode(true));\n\t}\n\tconsole.log('speed buttons ready');\n}\nfunction toggleYoutubeUltraWide() {\n\tlet style = document.getElementById('custom-styles');\n    if (!style) {\n      style = document.createElement('style');\n      style.id = \"custom-styles\";\n      document.head.appendChild(style);\n    }\n    let yt_page_manager = document.querySelector(\"#page-manager > ytd-watch-flexy.ytd-page-manager\");\n    let yt_watch_flexy = document.querySelector(\"ytd-watch-flexy[flexy] #columns.ytd-watch-flexy\");\n    let yt_chrome_bottom = document.querySelector(\".ytp-chrome-bottom\");\n    let yt_chapter_hover_container = document.querySelector(\".ytp-chapter-hover-container\");\n    let yt_video_player_stream = document.querySelector(\".html5-video-player .video-stream\");\n    if (!isUltraWideEnabled) {\n    \tstyle.innerHTML = \"@media screen and (display-mode: fullscreen) { body { zoom: 134%; } div#content.ytd-app { margin-top: -170px; margin-left: -434px; } }\";\n    \t// увеличиваем высоту плейлиста\n    \tyt_page_manager.style.cssText = yt_page_manager.style.cssText.replace(\"--ytd-watch-flexy-panel-max-height:502px;\", \"--ytd-watch-flexy-panel-max-height: 1080px;\");\n    \t// увеличиваем ширину контейнера видео\n    \tyt_watch_flexy.style.cssText = \"max-width: calc(1920px + (var(--ytd-watch-flexy-sidebar-width) + (3 * var(--ytd-margin-6x))));\";\n    \t// увеличиваем ширину управления видео\n    \t//yt_chrome_bottom.style.cssText = yt_chrome_bottom.style.cssText.replace(\"width: 1256px;\", \"width: 1896px;\");\n    \t//yt_chapter_hover_container.style.cssText = yt_chapter_hover_container.style.cssText.replace(\"width: 1256px;\", \"width: 1896px;\");\n    \t// увеличиваем размер видео\n    \tyt_video_player_stream.style.cssText = yt_video_player_stream.style.cssText.replace(\"width: 1280px; height: 720px;\", \"width: 1920px; height: 1080px;\");\n    \tisUltraWideEnabled = true;\n    \tconsole.log('UltraWide enabled');\n    } else {\n    \tstyle.innerHTML = \"\";\n    \t// уменьшаем высоту плейлиста\n    \tyt_page_manager.style.cssText = yt_page_manager.style.cssText.replace(\"--ytd-watch-flexy-panel-max-height: 1080px;\", \"--ytd-watch-flexy-panel-max-height:502px;\");\n    \t// уменьшаем ширину контейнера видео\n    \tyt_watch_flexy.style.cssText = \"max-width: calc(1280px + (var(--ytd-watch-flexy-sidebar-width) + (3 * var(--ytd-margin-6x))));\";\n    \t// уменьшаем ширину управления видео\n    \t//yt_chrome_bottom.style.cssText = yt_chrome_bottom.style.cssText.replace(\"width: 1896px;\", \"width: 1256px;\");\n    \t//yt_chapter_hover_container.style.cssText = yt_chapter_hover_container.style.cssText.replace(\"width: 1896px;\", \"width: 1256px;\");\n    \t// уменьшаем размер видео\n    \tyt_video_player_stream.style.cssText = yt_video_player_stream.style.cssText.replace(\"width: 1920px; height: 1080px;\", \"width: 1280px; height: 720px;\");\n    \tisUltraWideEnabled = false;\n    \tconsole.log('UltraWide disabled');\n    }\n}\nfunction appendYoutubeUltraWideButton() {\n\tconsole.log('append button for UltraWide display');\n\tlet yt_buttons = document.getElementById('info-text');\n\tlet yt_logo = document.getElementById('start');\n\tlet btn = document.createElement('button');\n\tbtn.className += 'user-speed-buttons';\n\tbtn.addEventListener('click', toggleYoutubeUltraWide, false);\n\tbtn.textContent = 'UWQHD';\n\tyt_buttons.append(btn);\n\tyt_logo.append(btn.cloneNode(true));\n\tconsole.log('UltraWide button ready');\n}\nvar isUltraWideEnabled = false;\nsetTimeout(appendYoutubeSpeedButtons, 1500);\nsetTimeout(appendYoutubeUltraWideButton, 1500);\nconsole.log('YouTube custom css initialized');",
+      "libs": [],
+      "name": "",
+      "options": {
+        "altCSS": false,
+        "altJS": false,
+        "autoImportant": false,
+        "on": true
+      }
+    },
+    {
       "compiledCss": "",
       "css": "",
       "id": "kinopoisk.ru/film/*/",
@@ -170,34 +198,6 @@
         "altCSS": false,
         "altJS": false,
         "autoImportant": true,
-        "on": true
-      }
-    },
-    {
-      "compiledCss": "ytd-add-to-playlist-renderer[dialog] #playlists#playlists#playlists.ytd-add-to-playlist-renderer {max-height: 600px!important;}",
-      "css": "ytd-add-to-playlist-renderer[dialog] #playlists#playlists#playlists.ytd-add-to-playlist-renderer {\n\tmax-height: 600px;\n}",
-      "id": "youtube.com",
-      "js": "",
-      "libs": [],
-      "name": "",
-      "options": {
-        "altCSS": false,
-        "altJS": false,
-        "autoImportant": false,
-        "on": true
-      }
-    },
-    {
-      "compiledCss": ".user-speed-buttons {color: rgb(144, 144, 144)!important; background-color: rgb(40, 40, 40)!important; text-decoration: none!important; border: none!important; height: 20px!important; margin-left: 10px!important;}.user-speed-buttons:hover {color: rgb(40, 40, 40)!important; background-color: rgb(144, 144, 144)!important; text-decoration: none!important; border: none!important; height: 20px!important; margin-left: 10px!important;}",
-      "css": ".user-speed-buttons {\n\tcolor: #909090;\n\tbackground-color: #282828;\n\ttext-decoration: none;\n\tborder: none;\n\theight: 20px;\n\tmargin-left: 10px;\n}\n.user-speed-buttons:hover {\n\tcolor: #282828;\n\tbackground-color: #909090;\n\ttext-decoration: none;\n\tborder: none;\n\theight: 20px;\n\tmargin-left: 10px;\n}",
-      "id": "youtube.com/watch?*",
-      "js": "function appendYoutubeSpeedButtons() {\n\tconsole.log('append buttons with other speed after YT logo in header');\n\tlet yt_buttons = document.getElementById('info-text');\n\tlet yt_logo = document.getElementById('start');\n\tfor (i = 0.5; i < 4.1; i += 0.5) {\n\t\tlet btn = document.createElement('button');\n\t\tbtn.setAttribute('onclick', 'document.getElementsByTagName(\"video\")[0].playbackRate = ' + i);\n\t\tbtn.textContent = i;\n\t\tbtn.className += 'user-speed-buttons';\n\t\tyt_buttons.append(btn);\n\t\tyt_logo.append(btn.cloneNode(true));\n\t}\n\tconsole.log('speed buttons ready');\n}\nfunction toggleYoutubeUltraWide() {\n\tlet style = document.getElementById('custom-styles');\n    if (!style) {\n      style = document.createElement('style');\n      style.id = \"custom-styles\";\n      document.head.appendChild(style);\n    }\n    if (!isUltraWideEnabled) {\n    \tstyle.innerHTML = \"@media screen and (display-mode: fullscreen) { body { zoom: 134%; } div#content.ytd-app { margin-top: -170px; margin-left: -434px; } }\";\n    \tisUltraWideEnabled = true;\n    \tconsole.log('UltraWide enabled');\n    } else {\n    \tstyle.innerHTML = \"\";\n    \tisUltraWideEnabled = false;\n    \tconsole.log('UltraWide disabled');\n    }\n}\nfunction appendYoutubeUltraWideButton() {\n\tconsole.log('append button for UltraWide display');\n\tlet yt_buttons = document.getElementById('info-text');\n\tlet yt_logo = document.getElementById('start');\n\tlet btn = document.createElement('button');\n\tbtn.className += 'user-speed-buttons';\n\tbtn.addEventListener('click', toggleYoutubeUltraWide, false);\n\tbtn.textContent = 'UWQHD';\n\tyt_buttons.append(btn);\n\tyt_logo.append(btn.cloneNode(true));\n\tconsole.log('UltraWide button ready');\n}\nvar isUltraWideEnabled = false;\nsetTimeout(appendYoutubeSpeedButtons, 1500);\nsetTimeout(appendYoutubeUltraWideButton, 1500);\nconsole.log('YouTube custom css initialized');",
-      "libs": [],
-      "name": "",
-      "options": {
-        "altCSS": false,
-        "altJS": false,
-        "autoImportant": false,
         "on": true
       }
     }
