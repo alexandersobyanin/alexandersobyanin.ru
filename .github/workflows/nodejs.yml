@@ -1,10 +1,8 @@
-name: Node CI
-
+name: Build and Deploy
 on:
   push:
     branches:
       - react
-
 env:
   HTTPS: ${{ secrets.HTTPS }}
   REACT_APP_VERSION: ${{ secrets.REACT_APP_VERSION }}
@@ -27,15 +25,32 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
+      - name: Checkout 🛎️
+        uses: actions/checkout@main
 
-    - name: Build and Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v2
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BASE_BRANCH: react
-        BRANCH: master
-        FOLDER: build
-        BUILD_SCRIPT: npm install && npm run build
-        CNAME: alexandersobyanin.ru
+      - name: Build 🔧 and Deploy 🚀
+        run: |
+          npm ci
+          npm run build
+          npm run deploy
+
+#jobs:
+#  build-and-deploy:
+#    runs-on: ubuntu-latest
+#    steps:
+#    - name: Checkout
+#      uses: actions/checkout@v1
+#
+#    - name: Deploy
+#      uses: JamesIves/github-pages-deploy-action@4.1.7
+#
+#    - name: Build and Deploy
+#      uses: JamesIves/github-pages-deploy-action@releases/v2
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        BASE_BRANCH: react
+#        BRANCH: master
+#        FOLDER: build
+#        BUILD_SCRIPT: npm install && npm run build
+#        CNAME: alexandersobyanin.ru
+#
