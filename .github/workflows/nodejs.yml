@@ -30,7 +30,7 @@ jobs:
       uses: actions/checkout@main
 
     - name: Build 🔧 and Deploy 🚀
-      uses: JamesIves/github-pages-deploy-action@3.6.2
+      uses: JamesIves/github-pages-deploy-action@3.4.2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BASE_BRANCH: react
