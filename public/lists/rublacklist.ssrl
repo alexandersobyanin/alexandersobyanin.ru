@@ -18,11 +18,11 @@
 @*://*.lurkmore.to/*
 @*://*.slideshare.net/*
 @*://*.slidesharecdn.com/*
-@*://*.t.me/*
-@*://*.tdesktop.com/*
-@*://*.telegram.me/*
-@*://*.telegram.org/*
-@*://*.telegra.ph/*
+;@*://*.t.me/*
+;@*://*.tdesktop.com/*
+;@*://*.telegram.me/*
+;@*://*.telegram.org/*
+;@*://*.telegra.ph/*
 ; Tracker
 @*://*.lostfilm.tv/*
 @*://*.rutor.info/*
