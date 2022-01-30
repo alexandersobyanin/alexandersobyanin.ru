@@ -12,17 +12,18 @@
 @*://*.abook-club.ru/*
 ;@*://*.duolingo.com/*
 @*://*.dou.ua/*
+@*://*.flibusta.is/*
 @*://*.graniru.org/*
 @*://*.linkedin.com/*
 @*://*.lurkmore.so/*
 @*://*.lurkmore.to/*
 @*://*.slideshare.net/*
 @*://*.slidesharecdn.com/*
-@*://*.t.me/*
-@*://*.tdesktop.com/*
-@*://*.telegram.me/*
-@*://*.telegram.org/*
-@*://*.telegra.ph/*
+;@*://*.t.me/*
+;@*://*.tdesktop.com/*
+;@*://*.telegram.me/*
+;@*://*.telegram.org/*
+;@*://*.telegra.ph/*
 ; Tracker
 @*://*.lostfilm.tv/*
 @*://*.rutor.info/*
