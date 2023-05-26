@@ -1,14 +1,19 @@
 ; Summary: Proxy Switchy! Rule List
 ; Website: https://github.com/FelisCatus/SwitchyOmega/wiki/RuleListUsage
-; Date: 30.04.2023
-; Version: 0.0.5
+; Date: 26.05.2023
+; Version: 0.0.6
 
 #BEGIN
 
 [wildcard]
+; Tor
 check.torproject.org
 *.onion
+; Blocked
 *.strava.com
+; Adult
+*.pornhub.com
+*.phncdn.com
 
 [regexp]
 
